@@ -41,40 +41,43 @@ Javascript wil be used in order to maintain the voting and leadership board. JS 
 ## Wireframes
 
 ### Home Page:
-<img src="Markdown/Home Page.png" alt="Home Page" height="400">
+<img src="Markdown/Home Page.png" alt="Home Page" height="400" align = "center">
 
 ### Main Page:
-<img src="Markdown/Main Page.png" alt="Main Page" height="400">
+<img src="Markdown/Main Page.png" alt="Main Page" height="400" align = "center">
 
 ### Teachers Page:
 <img src="Markdown/Click on Teachers.png" alt="Teachers Page" height="400">
 
 ### Unit Pages:
+<p align="center">
 <img src="Markdown/Sample of each Subject.png" alt="Unit Pages" height="400">
-
-### Unit Pages (Expanded):
 <img src="Markdown/Click Teacher.png" alt="Unit Pages Expanded" height="400">
+</p>
+
 
 ### Dropdown Menu (Expanded):
-<img src="Markdown/Dropdown menu.png" alt="Dropdown Menu" height="400">
+<p align = "center">
+<img src="Markdown/Dropdown menu.png" alt="Dropdown Menu" height="400" align = "center">
 
 ### Vote for Teachers Page (Main Page):
 <img src="Markdown/Voting.png" alt="Voting Page Main" height="400">
 
-### Vote for Teachers Page (Dropdown of Teachers):
 <img src="Markdown/Voting-Dropdown.png" alt="Voting Page Dropdown" height="400">
 
-### Vote for Teachers Page (Confirmation of Initial Vote):
 <img src="Markdown/Voting-TemporaryVote.png" alt="Initial Vote Confirmation" height="400">
 
-### Vote for Teachers Page (Confirmation of Final Vote):
 <img src="Markdown/Voting-TemporaryVote (2).png" alt="Final Vote Confirmation" height="400">
 
-### Leadership Board Page:
-<img src="Markdown/Leaderboard-First.png" alt="Leaderboard First" height="400">
+</p>
 
 ### Leadership Board Page:
+<p align = "center">
+<img src="Markdown/Leaderboard-First.png" alt="Leaderboard First" height="400">
+
 <img src="Markdown/Leaderboard-Categories.png" alt="Leaderboard Categories" height="400">
+
+</p>
 
 ### Link to Canva File (Website Outline)
 * https://www.canva.com/design/DAG2m9jMY1c/H4ORVf9WHcBgwpPdbov-6Q/edit?utm_content=DAG2m9jMY1c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
