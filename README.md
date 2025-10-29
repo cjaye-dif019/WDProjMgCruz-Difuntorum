@@ -1,7 +1,7 @@
 # WDProjMgCruz-Difuntorum
 ## Pillars of Excellence
 ### Logo:
-![alt text](<Markdown/Website Logo.png>)
+![alt text](<Markdown/logo.png>)
 
 <br>
 
