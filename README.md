@@ -33,7 +33,7 @@ This webpage aims to provide a comprehensive overview of the subject units of te
 
 ### Use of Javascript
  
-Javascript wil be used in order to maintain the voting and leadership board. JS will keep trach of which teacher a user selects using buttons. It will then store that vote temporarily, show a confirmation pop-up after a vote is submitted, then ultimately, update vote counts in real-time on the page. JS will then rank and configure all the votes to display them in an orderly manner on the leaderboard page.
+Javascript wil be used in order to maintain the voting and leadership board. JS will keep track of which teacher a user selects using buttons. It will then store that vote temporarily, show a confirmation pop-up after a vote is submitted, then ultimately, update vote counts in real-time on the page. JS will then rank and configure all the votes to display them in an orderly manner on the leaderboard page.
 
 <br>
 
