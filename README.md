@@ -1,7 +1,9 @@
 # WDProjMgCruz-Difuntorum
 ## The Pillars of Excellence
 ### Logo:
-![alt text](<Markdown/logo.png>)
+<p align = "center">
+<img src="Markdown/logo.png" alt="Logo" height="600"sa>
+</p>
 
 <br>
 
@@ -12,18 +14,17 @@ This webpage aims to provide a comprehensive overview of the subject units of te
 <br>
 
 ### Webpage Breakdown:
+• __Home Page__: Upon opening the website, the user will be directed to a screen with the title of the website and a button to redirect them to the main page.
 
-•__Home Page__: Upon opening the website, the user will be directed to a screen with the title of the website and a button to redirect them to the main page.
+• __Main Page__: The main page features the explanation to the image and carousel of as well as three buttons that will redirect the user to its respective page: teachers, votes for your favorite teacher, and view the leaderboard.
 
-•__Main Page__: The main page features the explanation to the image and carousel of as well as three buttons that will redirect the user to its respective page: teachers, votes for your favorite teacher, and view the leaderboard.
+• __Teachers' Page__: This page has the background of the teachers page and a list of each unit. Upon clicking a respective unit name, it will redirect the user to the respective units’ page.
 
-•__Teachers' Page__: This page has the background of the teachers page and a list of each unit. Upon clicking a respective unit name, it will redirect the user to the respective units’ page.
+• __Unit Pages__: Each unit will have their own respective pages. In this page is information about the unit as a whole (such as but not limited to: favorite place in PISAY, favorite batch to teach, etc.). The pieces of information to be displayed here will be based off the reponse of the unit as a _whole_ not individual responses from each teacher. Here as well are all the last names of each teachers in that unit. Upon clicking each teacher, their full name, picture, and the batch(es) they teach will pop up in a side box.
 
-•__Unit Pages__: Each unit will have their own respective pages. In this page is information about the unit as a whole (such as but not limited to: favorite place in PISAY, favorite batch to teach, etc.). The pieces of information to be displayed here will be based off the reponse of the unit as a _whole_ not individual responses from each teacher. Here as well are all the last names of each teachers in that unit. Upon clicking each teacher, their full name, picture, and the batch(es) they teach will pop up in a side box.
+• __Vote for Teacher's Page__: Here the user will be able to vote for their favorite teacher. There will be various cateogries to vote upon, such as, but not limited to: Best Teacher (overall), Best Presentations, Best Handwriting, etc.
 
-•__Vote for Teacher's Page__: Here the user will be able to vote for their favorite teacher. There will be various cateogries to vote upon, such as, but not limited to: Best Teacher (overall), Best Presentations, Best Handwriting, etc.
-
-•__Leader Board Page__: This board will show the leading teachers in terms of votes based from the voting page. The top 3 best teachers (overall), based on the respones will be displayed with their names and photos. Upon scrolling down, the user will be able to see the top 3 teachers of each category of voting as well.
+• __Leader Board Page__: This board will show the leading teachers in terms of votes based from the voting page. The top 3 best teachers (overall), based on the respones will be displayed with their names and photos. Upon scrolling down, the user will be able to see the top 3 teachers of each category of voting as well.
 
 #### Other Notes:
 * __Header__: Each subpage header has a dropdown menu at the side. Upon clicking it, options of each major subpage (Homepage, Voting Page, Teachers' Page, and Leaderboard) will appear. To the left as well is the logo and name of the website.
