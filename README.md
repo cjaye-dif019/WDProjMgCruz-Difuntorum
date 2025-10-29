@@ -28,7 +28,7 @@ This webpage aims to provide a comprehensive overview of the subject units of te
 
 #### Other Notes:
 * __Header__: Each subpage header has a dropdown menu at the side. Upon clicking it, options of each major subpage (Homepage, Voting Page, Teachers' Page, and Leaderboard) will appear. To the left as well is the logo and name of the website.
-* __Footer__: Footer contain the copyright for authors and icons of social media icons, of which will redirect users to the corresponding PSHS Main Campus' social media page.
+* __Footer__: Footer contain the copyright for authors, contact information, and icons of social media icons, of which will redirect users to the corresponding PSHS Main Campus' social media page.
 
 <br>
 
