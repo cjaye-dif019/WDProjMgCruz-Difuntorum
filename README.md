@@ -52,7 +52,7 @@ Javascript wil be used in order to maintain the voting and leadership board. JS 
 ![alt text](<Markdown/Sample of each Subject.png>)
 
 ### Unit Pages (Expanded):
-![alt text](<Markdown/Sample of each Subject (2).png>)
+![alt text](<Markdown/Click Teacher.png>)
 
 ### Dropdown Menu (Expanded):
 ![alt text](<Markdown/Dropdown menu.png>)
@@ -61,16 +61,19 @@ Javascript wil be used in order to maintain the voting and leadership board. JS 
 ![alt text](Markdown/Voting.png)
 
 ### Vote for Teachers Page (Dropdown of Teachers):
-![alt text](Markdown/Voting - 1.png)
+![alt text](<Markdown/Voting-Dropdown.png>)
 
 ### Vote for Teachers Page (Confirmation of Initial Vote):
-![alt text](Markdown/Voting - 2.png)
+![alt text](<Markdown/Voting-TemporaryVote.png>)
 
 ### Vote for Teachers Page (Confirmation of Final Vote):
-![alt text](Markdown/Voting - 4.png)
+![alt text](<Markdown/Voting-TemporaryVote (2).png>)
 
 ### Leadership Board Page:
-![alt text](<Markdown/Leadership Board.png>)
+![alt text](<Markdown/Leaderboard-First.png>)
+
+### Leadership Board Page:
+![alt text](<Markdown/Leaderboard-Categories.png>)
 
 ### Link to Canva File (Website Outline)
 * https://www.canva.com/design/DAG2m9jMY1c/H4ORVf9WHcBgwpPdbov-6Q/edit?utm_content=DAG2m9jMY1c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
