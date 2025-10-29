@@ -57,7 +57,7 @@ Javascript wil be used in order to maintain the voting and leadership board. JS 
 
 ### Dropdown Menu (Expanded):
 <p align = "center">
-<img src="Markdown/Dropdown menu.png" alt="Dropdown Menu" height="600" alsign ="right" >
+<img src="Markdown/Dropdown menu.png" alt="Dropdown Menu" height="600" align ="right" >
 
 ### Vote for Teachers Page (Main Page):
 <p align = "center">
