@@ -38,42 +38,43 @@ Javascript wil be used in order to maintain the voting and leadership board. JS 
 <br>
 
 ## Wireframes
+## Wireframes
 
 ### Home Page:
-![alt text](<Markdown/Home Page.png>)
+<img src="Markdown/Home Page.png" alt="Home Page" height="400">
 
 ### Main Page:
-![alt text](<Markdown/Main Page.png>)
+<img src="Markdown/Main Page.png" alt="Main Page" height="400">
 
 ### Teachers Page:
-![alt text](<Markdown/Click on Teachers.png>)
+<img src="Markdown/Click on Teachers.png" alt="Teachers Page" height="400">
 
 ### Unit Pages:
-![alt text](<Markdown/Sample of each Subject.png>)
+<img src="Markdown/Sample of each Subject.png" alt="Unit Pages" height="400">
 
 ### Unit Pages (Expanded):
-![alt text](<Markdown/Click Teacher.png>)
+<img src="Markdown/Click Teacher.png" alt="Unit Pages Expanded" height="400">
 
 ### Dropdown Menu (Expanded):
-![alt text](<Markdown/Dropdown menu.png>)
+<img src="Markdown/Dropdown menu.png" alt="Dropdown Menu" height="400">
 
 ### Vote for Teachers Page (Main Page):
-![alt text](Markdown/Voting.png)
+<img src="Markdown/Voting.png" alt="Voting Page Main" height="400">
 
 ### Vote for Teachers Page (Dropdown of Teachers):
-![alt text](<Markdown/Voting-Dropdown.png>)
+<img src="Markdown/Voting-Dropdown.png" alt="Voting Page Dropdown" height="400">
 
 ### Vote for Teachers Page (Confirmation of Initial Vote):
-![alt text](<Markdown/Voting-TemporaryVote.png>)
+<img src="Markdown/Voting-TemporaryVote.png" alt="Initial Vote Confirmation" height="400">
 
 ### Vote for Teachers Page (Confirmation of Final Vote):
-![alt text](<Markdown/Voting-TemporaryVote (2).png>)
+<img src="Markdown/Voting-TemporaryVote (2).png" alt="Final Vote Confirmation" height="400">
 
 ### Leadership Board Page:
-![alt text](<Markdown/Leaderboard-First.png>)
+<img src="Markdown/Leaderboard-First.png" alt="Leaderboard First" height="400">
 
 ### Leadership Board Page:
-![alt text](<Markdown/Leaderboard-Categories.png>)
+<img src="Markdown/Leaderboard-Categories.png" alt="Leaderboard Categories" height="400">
 
 ### Link to Canva File (Website Outline)
 * https://www.canva.com/design/DAG2m9jMY1c/H4ORVf9WHcBgwpPdbov-6Q/edit?utm_content=DAG2m9jMY1c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
