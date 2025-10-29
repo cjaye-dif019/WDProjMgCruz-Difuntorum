@@ -1,5 +1,5 @@
 # WDProjMgCruz-Difuntorum
-## Pillars of Excellence
+## The Pillars of Excellence
 ### Logo:
 ![alt text](<Markdown/logo.png>)
 
@@ -37,7 +37,6 @@ Javascript wil be used in order to maintain the voting and leadership board. JS 
 
 <br>
 
-## Wireframes
 ## Wireframes
 
 ### Home Page:
