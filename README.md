@@ -46,7 +46,7 @@ Javascript wil be used in order to maintain the voting and leadership board. JS 
 <img src="Markdown/Main Page.png" alt="Main Page" height="600" align = "center">
 
 ### Teachers Page:
-<img src="Markdown/Click on Teachers.png" alt="Teachers Page" height="600" align = "center">
+<img src="Markdown/Click on Teachers.png" alt="Teachers Page" height="600">
 
 ### Unit Pages:
 <p align="center">
