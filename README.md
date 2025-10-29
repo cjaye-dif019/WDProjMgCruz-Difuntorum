@@ -13,22 +13,21 @@ This webpage aims to provide a comprehensive overview of the subject units of te
 
 ### Webpage Breakdown:
 
-Home Page: Upon opening the website, the user will be directed to a screen with the title of the website and a button to redirect them to the main page.
+•__Home Page__: Upon opening the website, the user will be directed to a screen with the title of the website and a button to redirect them to the main page.
 
-Main Page: The main page features the explanation to the image and carousel of as well as three buttons that will redirect the user to its respective page: teachers, votes for your favorite teacher, and view the leaderboard.
+•__Main Page__: The main page features the explanation to the image and carousel of as well as three buttons that will redirect the user to its respective page: teachers, votes for your favorite teacher, and view the leaderboard.
 
-Teachers Page: This page has the background of the teachers page and a list of each unit. Upon click each unit name, it will redirect the user to the respective units’ page.
+•__Teachers' Page__: This page has the background of the teachers page and a list of each unit. Upon clicking a respective unit name, it will redirect the user to the respective units’ page.
 
-Unit Pages: Each unit will have their own respective pages. In this page is information about the unit as a whole (such as but not limited to: favorite place in PISAY, favorite batch to teach, etc.). Here as well are all the last names of each teachers in that unit. Upon clicking each teacher, their full name, picture, and the batch they teach will pop up in a side box.
+•__Unit Pages__: Each unit will have their own respective pages. In this page is information about the unit as a whole (such as but not limited to: favorite place in PISAY, favorite batch to teach, etc.). The pieces of information to be displayed here will be based off the reponse of the unit as a _whole_ not individual responses from each teacher. Here as well are all the last names of each teachers in that unit. Upon clicking each teacher, their full name, picture, and the batch(es) they teach will pop up in a side box.
 
-Vote for Teachers Page: Here the user will be able to vote for their favorite teacher.
+•__Vote for Teacher's Page__: Here the user will be able to vote for their favorite teacher. There will be various cateogries to vote upon, such as, but not limited to: Best Teacher (overall), Best Presentations, Best Handwriting, etc.
 
-Leadership Board Page: This board will show the leading teachers in terms of votes from the voting page.
+•__Leader Board Page__: This board will show the leading teachers in terms of votes based from the voting page. The top 3 best teachers (overall), based on the respones will be displayed with their names and photos. Upon scrolling down, the user will be able to see the top 3 teachers of each category of voting as well.
 
 #### Other Notes:
-* Each subpage header has a dropdown menu at the side. Upon clicking it, options of each major subpage (Homepage, Voting Page, Teachers' Page, and Leaderboard) will appear. On this header as well to the right is the logo and name of website.
-
-* Footer will just add the copyright for authors.
+* __Header__: Each subpage header has a dropdown menu at the side. Upon clicking it, options of each major subpage (Homepage, Voting Page, Teachers' Page, and Leaderboard) will appear. To the left as well is the logo and name of the website.
+* __Footer__: Footer contain the copyright for authors and icons of social media icons, of which will redirect users to the corresponding PSHS Main Campus' social media page.
 
 <br>
 
@@ -41,25 +40,37 @@ Javascript wil be used in order to maintain the voting and leadership board. JS 
 ## Wireframes
 
 ### Home Page:
-![alt text](<Markdown/Home Page.jpg>)
+![alt text](<Markdown/Home Page.png>)
 
 ### Main Page:
-![alt text](<Markdown/Main Page.jpg>)
+![alt text](<Markdown/Main Page.png>)
 
 ### Teachers Page:
-![alt text](<Markdown/Click on Teachers.jpg>)
+![alt text](<Markdown/Click on Teachers.png>)
 
 ### Unit Pages:
-![alt text](<Markdown/Sample of each Subject.jpg>)
+![alt text](<Markdown/Sample of each Subject.png>)
 
 ### Unit Pages (Expanded):
-![alt text](<Markdown/Sample of each Subject (2).jpg>)
+![alt text](<Markdown/Sample of each Subject (2).png>)
 
-### Vote for Teachers Page:
-![alt text](Markdown/Voting.jpg)
+### Dropdown Menu (Expanded):
+![alt text](<Markdown/Dropdown menu.png>)
+
+### Vote for Teachers Page (Main Page):
+![alt text](Markdown/Voting.png)
+
+### Vote for Teachers Page (Dropdown of Teachers):
+![alt text](Markdown/Voting - 1.png)
+
+### Vote for Teachers Page (Confirmation of Initial Vote):
+![alt text](Markdown/Voting - 2.png)
+
+### Vote for Teachers Page (Confirmation of Final Vote):
+![alt text](Markdown/Voting - 4.png)
 
 ### Leadership Board Page:
-![alt text](<Markdown/Leadership Board.jpg>)
+![alt text](<Markdown/Leadership Board.png>)
 
 ### Link to Canva File (Website Outline)
 * https://www.canva.com/design/DAG2m9jMY1c/H4ORVf9WHcBgwpPdbov-6Q/edit?utm_content=DAG2m9jMY1c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
