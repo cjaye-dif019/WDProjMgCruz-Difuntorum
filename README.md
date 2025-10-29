@@ -2,7 +2,7 @@
 ## The Pillars of Excellence
 ### Logo:
 <p align = "center">
-<img src="Markdown/logo.png" alt="Logo" height="600"sa>
+<img src="readme images/logo.png" alt="Logo" height="600"sa>
 </p>
 
 <br>
@@ -41,42 +41,42 @@ Javascript wil be used in order to maintain the voting and leadership board. JS 
 ## Wireframes
 
 ### Home Page:
-<img src="Markdown/Home Page.png" alt="Home Page" height="600" align = "center">
+<img src="readme images/Home Page.png" alt="Home Page" height="600" align = "center">
 
 ### Main Page:
-<img src="Markdown/Main Page.png" alt="Main Page" height="600" align = "center">
+<img src="readme images/Main Page.png" alt="Main Page" height="600" align = "center">
 
 ### Teachers Page:
-<img src="Markdown/Click on Teachers.png" alt="Teachers Page" height="600">
+<img src="readme images/Click on Teachers.png" alt="Teachers Page" height="600">
 
 ### Unit Pages:
 <p align="center">
-<img src="Markdown/Sample of each Subject.png" alt="Unit Pages" height="600">
-<img src="Markdown/Click Teacher.png" alt="Unit Pages Expanded" height="600">
+<img src="readme images/Sample of each Subject.png" alt="Unit Pages" height="600">
+<img src="readme images/Click Teacher.png" alt="Unit Pages Expanded" height="600">
 </p>
 
 
 ### Dropdown Menu (Expanded):
-<img src="Markdown/Dropdown menu.png" alt="Dropdown Menu" height="600" align = "center" >
+<img src="readme images/Dropdown menu.png" alt="Dropdown Menu" height="600" align = "center" >
 
 ### Vote for Teachers Page (Main Page):
 <p align = "center">
 
-<img src="Markdown/Voting.png" alt="Voting Page Main" height="600">
+<img src="readme images/Voting.png" alt="Voting Page Main" height="600">
 
-<img src="Markdown/Voting-Dropdown.png" alt="Voting Page Dropdown" height="600">
+<img src="readme images/Voting-Dropdown.png" alt="Voting Page Dropdown" height="600">
 
-<img src="Markdown/Voting-TemporaryVote.png" alt="Initial Vote Confirmation" height="600">
+<img src="readme images/Voting-TemporaryVote.png" alt="Initial Vote Confirmation" height="600">
 
-<img src="Markdown/Voting-TemporaryVote (2).png" alt="Final Vote Confirmation" height="600">
+<img src="readme images/Voting-TemporaryVote (2).png" alt="Final Vote Confirmation" height="600">
 
 </p>
 
 ### Leadership Board Page:
 <p align = "center">
-<img src="Markdown/Leaderboard-First.png" alt="Leaderboard First" height="600">
+<img src="readme images/Leaderboard-First.png" alt="Leaderboard First" height="600">
 
-<img src="Markdown/Leaderboard-Categories.png" alt="Leaderboard Categories" height="600">
+<img src="readme images/Leaderboard-Categories.png" alt="Leaderboard Categories" height="600">
 
 </p>
 
