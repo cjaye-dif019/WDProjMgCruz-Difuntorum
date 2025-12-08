@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pillars of Excellence – Teachers of Pisay</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content="Pillars of Excellence; a website dedicated to the teachers of PSHS-MC.">
+    <meta name="keywords" content="Pillars of Excellence">
+    <meta name="author" content="SCA Cruz & CJA Difuntorum">
+
+
+    <title>The Pillars of Excellence</title>
+    <link rel="icon" href = "readme images/logo.png" type="image/png">
+    <script src = "script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,17 +55,23 @@
 
         /* header */
         header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 40px;
-            background: #faf4de;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    background: rgba(251, 251, 251, 0.666);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+
+    padding: 18px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
         .logo-title {
             display: flex;
             align-items: center;
@@ -156,14 +174,19 @@
 
         /* footer */
         footer {
-            margin-top: 60px;
-            background: #FFF8DE;
-            padding: 30px 50px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-top: 4px solid #003d99;
-        }
+    margin-top: 60px;
+    
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+
+
+background: rgba(251, 251, 251, 0.297);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
         .footer-left {
             font-weight: bold;
@@ -180,7 +203,7 @@
             transform: scale(1.1);
         }
 
-        /* Slideshow container */
+        /* slideshow container */
 .slideshow-container {
   max-width: 850px;
   position: relative;
@@ -191,7 +214,6 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
@@ -201,7 +223,7 @@
   display: block;
 }
 
-/* Next & previous buttons */
+/* next & back buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -225,7 +247,6 @@
   transform: scale(1.2);
 }
 
-/* Caption text */
 .text {
   color: #003d99;
   font-size: 22px;
@@ -235,7 +256,6 @@
   left: 20px;
 }
 
-/* Number text (1/3) */
 .numbertext {
   color: #003d99;
   font-size: 16px;
@@ -244,7 +264,7 @@
   left: 20px;
 }
 
-/* Dots */
+/* dos */
 .dot {
   cursor: pointer;
   height: 12px;
@@ -260,7 +280,6 @@
   background-color: #5fc4ff;
 }
 
-/* Fade animation */
 .fade {
   animation-name: fade;
   animation-duration: 0.7s;
@@ -271,11 +290,39 @@
   to {opacity: 1}
 }
 
+.nav-menu {
+    position: absolute;
+    top: 85px;
+    right: 40px;
+    width: 230px;
+    background: #e4d2a8;
+    border-radius: 15px;
+    padding: 10px 0;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    animation: fadeIn 0.25s ease-out;
+}
+
+.nav-menu a {
+    padding: 15px 22px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    transition: 0.2s;
+}
+
+.nav-menu a:last-child {
+    border-bottom: none;
+}
+
+.nav-menu a:hover {
+    background: rgba(255,255,255,0.45);
+    padding-left: 28px;
+}
     </style>
 </head>
-
-
-
 
 
 
@@ -289,47 +336,58 @@
             <div>Teachers of Pisay</div>
         </div>
     </div>
-    <div class="menu">☰</div>
+
+    <div class="menu" onclick="toggleMenu()">☰</div>
+
+<!-- menu  -->
+<div id="menuDropdown" class="nav-menu">
+    <a href="main_page.html">Home Page</a>
+    <a href="../public/teachers.html">Teachers' Page</a>
+    <a href="../public/voting.html">Vote for Teacher</a>
+    <a href="../public/leaderboard.html">Leaderboard</a>
+</div>
+
+
 </header>
 
 <div class="container">
     <div class="intro-box">
         <h2>Introduction to Website</h2>
         <p>
-            Welcome to the official platform honoring the exceptional teachers of the Philippine Science High School System. add moreee
+            Welcome to the official platform honoring the exceptional teachers of the Philippine Science High School - Main Campus. add moreee
         </p>
     </div>
 
 
-    <!-- Slideshow container -->
+    <!-- Slideshow  -->
 <div class="slideshow-container">
 
-  <!-- Full-width images with number and caption text -->
+  <!-- group pics -->
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
-    <img src="../teacher_images/ValuesEducation_Group.jpg" style="width:100%">
+    <img src="../teacher_images/ValEd_Unit/ValuesEducation_Group.jpg" style="width:100%">
     <div class="text">Caption Text</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img src="../teacher_images/ValuesEducation_Group.jpg" style="width:100%">
+    <img src="../teacher_images/ValEd_Unit/ValuesEducation_Group.jpg" style="width:100%">
     <div class="text">Caption Two</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <img src="../teacher_images/ValuesEducation_Group.jpg" style="width:100%">
+    <img src="../teacher_images/ValEd_Unit/ValuesEducation_Group.jpg" style="width:100%">
     <div class="text">Caption Three</div>
   </div>
 
-  <!-- Next and previous buttons -->
+  <!-- next and back  -->
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 <br>
 
-<!-- The dots/circles -->
+<!-- dots -->
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
@@ -337,11 +395,11 @@
 </div>
 
     <div class="button-row">
-        <div class="button">Teachers</div>
-        <div class="button">Vote for your favorite teacher</div>
+        <div class="button"><a href="../public/teachers.html">Teachers</a></div>
+        <div class="button"><a href="../public/voting.html">Vote for your favorite teacher</a></div>
     </div>
 
-    <div class="leaderboard-btn">View the leaderboard</div>
+    <div class="leaderboard-btn"><a href="../public/leaderboard.html">Leaderboard</a></div>
 </div>
 
 <footer>
@@ -395,6 +453,14 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].classList.add("active");
 }
+
+  
+function toggleMenu() {
+    const menu = document.getElementById("menuDropdown");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+
 </script>
 
 </html>
