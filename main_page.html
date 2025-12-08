@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pillars of Excellence – Teachers of Pisay</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+
+    @font-face {
+  font-family: "Aileron";
+  src: url(../teacher_images/aileron.heavy.otf); 
+  font-weight: 800;
+}
+    
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+        * {
+            font-family: "Montserrat", arial;
+        }
+
+        .title-text,
+        h1, h2, h3,
+        .button,
+        .leaderboard-btn {
+            font-family: "Aileron", sans-serif !important;
+            letter-spacing: 0.3px;
+            font-weight: 800;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(#72a4ee, #3757c0);
+            color: #0d1b2a;
+        }
+
+        /* header */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background: #faf4de;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-title img {
+            width: 55px;
+        }
+
+        .menu {
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* middle part */
+        .container {
+            width: 85%;
+            margin: auto;
+            padding-top: 40px;
+        }
+
+        .intro-box {
+            background: #c9f1ff;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        h1, h2, h3 {
+            color: #0a2a43;
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.7;
+            color: #333;
+        }
+
+        /* image carousel placeholder */
+        .slideshow {
+            margin: 40px auto;
+            width: 100%;
+            max-width: 850px;
+            height: 350px;
+            background: #faf4de;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-size: 22px;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+
+        /* buttons */
+        .button-row {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+        }
+
+        .button {
+            background: #5fc4ff;
+            padding: 18px 40px;
+            border-radius: 18px;
+            font-size: 22px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+
+        .button:hover {
+            background: #3ea8eb;
+            transform: translateY(-3px);
+        }
+
+        .leaderboard-btn {
+            background: #7ad6ff;
+            margin: 40px auto;
+            padding: 15px 25px;
+            text-align: center;
+            width: 300px;
+            border-radius: 15px;
+            font-size: 22px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+
+        .leaderboard-btn:hover {
+            background: #52c7ff;
+            transform: scale(1.03);
+        }
+
+        /* footer */
+        footer {
+            margin-top: 60px;
+            background: #FFF8DE;
+            padding: 30px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 4px solid #003d99;
+        }
+
+        .footer-left {
+            font-weight: bold;
+        }
+
+        .footer-icons img {
+            width: 28px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .footer-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Slideshow container */
+.slideshow-container {
+  max-width: 850px;
+  position: relative;
+  margin: 40px auto;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #faf4de;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 100%;
+  display: block;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #003d99;
+  font-weight: bold;
+  font-size: 28px;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  color: #1a3caa;
+  transform: scale(1.2);
+}
+
+/* Caption text */
+.text {
+  color: #003d99;
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+}
+
+/* Number text (1/3) */
+.numbertext {
+  color: #003d99;
+  font-size: 16px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+/* Dots */
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #c9f1ff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.dot:hover, .active {
+  background-color: #5fc4ff;
+}
+
+/* Fade animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 0.7s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+    </style>
+</head>
+
+
+
+
+
+
+<body>
+
+<header>
+    <div class="logo-title">
+        <img src="readme images/logo.png" />
+        <div>
+            <div class="title-text" style="font-size: 26px;">Pillars of Excellence</div>
+            <div>Teachers of Pisay</div>
+        </div>
+    </div>
+    <div class="menu">☰</div>
+</header>
+
+<div class="container">
+    <div class="intro-box">
+        <h2>Introduction to Website</h2>
+        <p>
+            Welcome to the official platform honoring the exceptional teachers of the Philippine Science High School System. add moreee
+        </p>
+    </div>
+
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="../teacher_images/ValuesEducation_Group.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="../teacher_images/ValuesEducation_Group.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="../teacher_images/ValuesEducation_Group.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+    <div class="button-row">
+        <div class="button">Teachers</div>
+        <div class="button">Vote for your favorite teacher</div>
+    </div>
+
+    <div class="leaderboard-btn">View the leaderboard</div>
+</div>
+
+<footer>
+    <div class="footer-left">
+        Pillars of Excellence<br>© SCA CRUZ, CJA DIFUNTOUM
+    </div>
+
+    <div class="footer-icons">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" />
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" />
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" />
+    </div>
+
+    <div class="footer-right">
+        Contact No: 01234567890<br>
+        Email: b2029scacruz@pshs.edu.ph & b2029cjadifuntorum@pshs.edu.ph
+    </div>
+</footer>
+
+</body>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].classList.add("active");
+}
+</script>
+
+</html>
