@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vote Your Favorite Teacher | Pillars of Excellence</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #3b4cca, #9056e0);
+      color: #0a2a43;
+    }
+
+    /* header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(251, 251, 251, 0.666);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 18px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-title img {
+            width: 55px;
+        }
+
+        .menu {
+            font-size: 32px;
+            font-weight: 900;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* menu */
+        .nav-menu {
+            position: absolute;
+            top: 85px;
+            right: 40px;
+            width: 230px;
+            background: #e4d2a8;
+            border-radius: 15px;
+            padding: 10px 0;
+            display: none;
+            flex-direction: column;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+            animation: fadeIn 0.25s ease-out;
+        }
+
+        .nav-menu a {
+            padding: 15px 22px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 700;
+            border-bottom: 1px solid rgba(0,0,0,0.15);
+            transition: 0.2s;
+        }
+
+        .nav-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(255,255,255,0.45);
+            padding-left: 28px;
+        }
+
+
+                /* footer */
+        footer {
+            margin-top: 60px;
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            background: rgba(251, 251, 251, 0.297);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .footer-icons img {
+            width: 28px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 22px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .hero {
+      background: rgba(255,255,255,0.35);
+      padding: 35px;
+      border-radius: 28px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      margin-top: 12px;
+      font-size: 15px;
+    }
+
+    .subjects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    .subject {
+      background: #4db8ff;
+      padding: 18px;
+      border-radius: 30px;
+      text-align: center;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .subject:hover {
+      transform: translateY(-4px);
+      background: #2fa0ff;
+    }
+
+    /* Overlay */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal {
+      background: #4db8ff;
+      padding: 30px;
+      border-radius: 24px;
+      width: 320px;
+      text-align: center;
+      animation: pop 0.3s ease;
+    }
+
+    .teacher {
+      background: rgba(255,255,255,0.7);
+      padding: 10px;
+      border-radius: 12px;
+      margin: 8px 0;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .teacher:hover {
+      background: white;
+    }
+
+    .confirm {
+      background: #f5d58c;
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+        <div class="logo-title">
+        <img src="../readme images/logo.png" />
+            <div>
+                <div style="font-size: 26px; font-weight: 800;">Pillars of Excellence</div>
+                <div>Teachers of Pisay</div>
+            </div>
+        </div>
+
+        <div class="menu" onclick="toggleMenu()">☰</div>
+    </header>
+
+  <!-- menu -->
+    <div id="menuDropdown" class="nav-menu">
+        <a href="../main_page.html">Home Page</a>
+        <a href="../public/teachers.html">Teachers' Page</a>
+        <a href="../public/voting.html">Vote for Teacher</a>
+        <a href="../public/leaderboard.html">Leaderboard</a>
+    </div>
+
+
+    
+
+<div class="container">
+  <div class="hero">
+    <h1>VOTE YOUR FAVORITE TEACHER</h1>
+    <p>Select a subject below to cast your vote.</p>
+  </div>
+
+  <div class="subjects">
+    <div class="subject" onclick="openVote('Biology')">Biology</div>
+    <div class="subject" onclick="openVote('Chemistry')">Chemistry</div>
+    <div class="subject" onclick="openVote('Computer_Science')">Computer Science</div>
+    <div class="subject" onclick="openVote('English')">English</div>
+    <div class="subject" onclick="openVote('Filipino')">Filipino</div>    
+    <div class="subject" onclick="openVote('Integrated Science')">Integrated Science</div>
+    <div class="subject" onclick="openVote('Mathematics')">Mathematics</div>
+    <div class="subject" onclick="openVote('Physics')">Physics</div>
+    <div class="subject" onclick="openVote('Research')">Research</div>
+    <div class="subject" onclick="openVote('Social Science')">Social Science</div>
+    <div class="subject" onclick="openVote('Technology')">Technology</div>
+    <div class="subject" onclick="openVote('PEHM')">PEHM</div>
+    <div class="subject" onclick="openVote('Values Education')">Values Education</div>
+
+    
+  </div>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h3 id="subjectTitle"></h3>
+    <div id="teachers"></div>
+    <div class="confirm" onclick="confirmVote()">CONFIRM</div>
+  </div>
+</div>
+
+<footer>
+        <div>
+            Pillars of Excellence<br>© SCA CRUZ & CJA DIFUNTORUM
+        </div>
+
+        <div class="footer-icons">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
+        </div>
+
+        <div>
+            Contact: 01234567890<br>
+            Emails: b2029scacruz@pshs.edu.ph | b2029cjadifuntorum@pshs.edu.ph
+        </div>
+    </footer>
+
+
+<script>
+
+        /* menu funcitons */
+        function toggleMenu() {
+            const menu = document.getElementById("menuDropdown");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+/***********************
+ DATA
+***********************/
+const teacherData = {
+Biology: ['Christian Abagat',  'Rieziel Bernal', 'Chuckie Calsado', 'Melanie Cheng', 'Dawn Crisologo','Carmina Dalida', 'Felipe Del Castillo', 'Aileen Dela Cruz', 'Justin Guce','Jerrica Alzate-Gunda', 'Ralph Hipolito', 'Maria Pinlac', 'Danah Purificacion', 'Neil Ramirez'],
+Chemistry: ['Kris Aquino', 'Lovelyn Balbedina', 'Edwin De Ocampo', 'Mara Esguerra', 'Joseph Estrella', 'Lester Mendoza', 'Dinnie Morales', 'Efren Paz', 'Leonel Po', 'Xandra Razonabe', 'Azlek Tan', 'Kat Villar', 'Arianne Won'],
+Computer_Science: [],
+};
+
+let selectedTeacher = '';
+let selectedSubject = '';
+
+/***********************
+ OPEN VOTING MODAL
+***********************/
+function openVote(subject) {
+  selectedSubject = subject;
+  selectedTeacher = '';
+
+  document.getElementById('overlay').style.display = 'flex';
+  document.getElementById('subjectTitle').innerText = subject;
+
+  const list = document.getElementById('teachers');
+  list.innerHTML = '';
+
+  teacherData[subject].forEach(t => {
+    const div = document.createElement('div');
+    div.className = 'teacher';
+    div.innerText = t;
+
+    div.onclick = () => {
+      document.querySelectorAll('.teacher').forEach(el =>
+        el.style.background = 'rgba(255,255,255,0.7)'
+      );
+      div.style.background = '#fffcd6';
+      selectedTeacher = t;
+    };
+
+    list.appendChild(div);
+  });
+}
+
+/***********************
+ SAVE VOTE
+***********************/
+function confirmVote() {
+  if (!selectedTeacher) {
+    alert("Please select a teacher first.");
+    return;
+  }
+
+  let votes = JSON.parse(localStorage.getItem("teacherVotes")) || {};
+
+  if (!votes[selectedSubject]) votes[selectedSubject] = {};
+  votes[selectedSubject][selectedTeacher] =
+    (votes[selectedSubject][selectedTeacher] || 0) + 1;
+
+  localStorage.setItem("teacherVotes", JSON.stringify(votes));
+
+  alert(`Vote successfully saved for ${selectedTeacher}!`);
+
+  document.getElementById('overlay').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

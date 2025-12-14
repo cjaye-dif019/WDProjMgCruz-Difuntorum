@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name = "description" content="Pillars of Excellence; a website dedicated to the teachers of PSHS-MC.">
+    <meta name="keywords" content="Pillars of Excellence">
+    <meta name="author" content="SCA Cruz & CJA Difuntorum">
+
+    <title>Pillars of Excellence</title>
+    <script src = "../../java/unit.js" defer></script>
+    <link rel="stylesheet" href="../../css/unit.css">
+    <link rel="icon" href = "../../readme images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(90deg, #d6824a, #d69f4a);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-title">
+        <img src="../readme images/logo.png" />
+            <div>
+                <div style="font-size: 26px; font-weight: 800;">Pillars of Excellence</div>
+                <div>Teachers of Pisay</div>
+            </div>
+        </div>
+
+        <div class="menu" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!-- menu -->
+    <div id="menuDropdown" class="nav-menu">
+        <a href="../../main_page.html">Home Page</a>
+        <a href="../teachers_main.html">Teachers' Page</a>
+        <a href="../voting_main.html">Vote for Teacher</a>
+        <a href="../voting pages/leaderboard.html">Leaderboard</a>
+    </div>
+
+    <div class="container">
+        <div class="subject-box">
+                <h2>Chemistry</h2>
+            <ul>
+                <li><strong>Favorite Tambayan in Pisay:</strong> Chem Unit</li>
+                <li><strong>Favorite Batch to Teach:</strong> Batch 2025, 2029, and 2030</li>
+                <li><strong>Favorite Canteen Food:</strong> Vegetables / Colai's Dinuguan</li>
+                <li><strong>Best Pisay Event:</strong> Humanities Festival and YMSAT</li>
+                <li><strong>Most Interesting Thing you've Seen from a Student:</strong> Those who are courteous towards the teachers even though they are not their subject teachers. || A letter from a student during Teachers' Day </li>
+                <li><strong>Best Subject Unit in Pisay (aside from your own):</strong> IS / PEHM</li>
+                <li><strong>Motto in Life:</strong>  "Genius is 1% inspiration and 99% perspiration."" || “If God is with me, who will be against me.” and “Always give your best in eveything.” </li>
+                <li><strong>Message to Future Batches:</strong> Be part of the solution and become the catalyst of change. || "Nothing will work unless you do." — Maya Angelou </li>
+            </ul>
+        </div>
+
+        <div class="buttons-grid">
+
+            <!-- just copy paste the thing for more/less -->
+            <div class="teacher-btn"
+                data-name="Ma'am Kris"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 9 & 10">
+                Kris Ann Aquino
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Ma'am Love"
+                data-img="../teacher_images/Chem_Unit/Balbedina.jpg"
+                data-details="Grade 8">
+                Lovelyn Balbedina
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Sir Edwin"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 10 & 11">
+                Edwin De Ocampo
+            </div>
+            
+            <div class="teacher-btn"
+                data-name="Ma'am Mara"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 8">
+                Mara Esguerra
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Sir Matt"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 10 & 11">
+                Joseph Matthew Estrella
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Sir Lester"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 9 & 10">
+                Lester Mendoza
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Ma'am Morales"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 11 / Unit Head">
+                Dinnie Morales
+            </div>      
+
+            <div class="teacher-btn"
+                data-name="Sir Paz"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 8 & 12">
+                Efren Paz
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Sir Leo"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 12">
+                Leonel Brandon Po
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Ma'am Xandra"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 12">
+                Xandra Rasonabe
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Sir Owen"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 11">
+                Azlek Owen Tan
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Ma'am Arianne"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 12">
+                Arianne Won
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Ma'am Kat"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 9 & 10">
+                Katrina Villar
+            </div>  
+        </div>
+    </div>
+
+    <!-- popup -->
+    <div class="popup-bg" id="popupBg">
+        <div class="popup-box">
+            <img id="popupImg" class="popup-img" src="">
+            <h3 id="popupName"></h3>
+            <p id="popupDetails"></p>
+            <div class="close-btn" onclick="closePopup()">Close</div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            Pillars of Excellence<br>© SCA CRUZ & CJA DIFUNTORUM
+        </div>
+
+        <div class="footer-icons">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
+        </div>
+
+        <div>
+            Contact: 01234567890<br>
+            Emails: b2029scacruz@pshs.edu.ph | b2029cjadifuntorum@pshs.edu.ph
+        </div>
+    </footer>
+</body>
+</html>
