@@ -1,0 +1,51 @@
+/* Custom Aileron Font */
+@font-face {
+    font-family: "Aileron";
+    src: url("../teacher_images/aileron.heavy.otf");
+    font-weight: 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: linear-gradient(#72a4ee, #3757c0);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: "Aileron", sans-serif; /* Uses your custom font */
+    color: rgb(235, 235, 235);
+    font-weight: 900;
+    margin-bottom: 30px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+a {
+    font-family: "Montserrat", sans-serif;
+    background-color: #faf4de;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+a:hover {
+    background-color: #e2d8b4;
+    color: rgb(46, 46, 46);
+    transform: scale(1.05);
+}
