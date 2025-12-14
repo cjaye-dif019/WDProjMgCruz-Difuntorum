@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name = "description" content="Pillars of Excellence; a website dedicated to the teachers of PSHS-MC.">
+    <meta name="keywords" content="Pillars of Excellence">
+    <meta name="author" content="SCA Cruz & CJA Difuntorum">
+
+    <title>Pillars of Excellence</title>
+    <link rel="icon" href = "../readme images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        @font-face {
+            font-family: "Aileron";
+            src: url(../teacher_images/aileron.heavy.otf); 
+            font-weight: 800;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            background: linear-gradient(90deg, #3b4cca, #9056e0);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* main stuff */
+        .container {
+            width: 85%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+            flex: 1;     
+        }
+
+        ul {
+            text-align: left;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        h2{
+            font-size: 2rem;
+            text-align: center;
+            font-family: "Aileron", sans-serif;
+        }
+
+        /* header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(251, 251, 251, 0.666);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 18px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-title img {
+            width: 55px;
+        }
+
+        .menu {
+            font-size: 32px;
+            font-weight: 900;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* menu */
+        .nav-menu {
+            position: absolute;
+            top: 85px;
+            right: 40px;
+            width: 230px;
+            background: #e4d2a8;
+            border-radius: 15px;
+            padding: 10px 0;
+            display: none;
+            flex-direction: column;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+            animation: fadeIn 0.25s ease-out;
+        }
+
+        .nav-menu a {
+            padding: 15px 22px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 700;
+            border-bottom: 1px solid rgba(0,0,0,0.15);
+            transition: 0.2s;
+        }
+
+        .nav-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(255,255,255,0.45);
+            padding-left: 28px;
+        }
+
+        /*main stuff */
+        .container {
+            width: 85%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .subject-box {
+            background: rgba(255,255,255,0.4);
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.18);
+        }
+
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 80px;
+        }
+
+        .teacher-btn {
+            background: #4db8ff;
+            padding: 18px 0;
+            border-radius: 35px;
+            font-weight: 700;
+            cursor: pointer;
+            color: #0a2a43;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+            transition: 0.25s;
+        }
+
+        .teacher-btn:hover {
+            background: #2fa0ff;
+            transform: translateY(-3px);
+        }
+
+        /* popup */
+        .popup-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.45);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            z-index: 9999;
+        }
+
+        .popup-box {
+            background: #4db8ff;
+            padding: 25px;
+            width: 310px;
+            border-radius: 22px;
+            text-align: center;
+            color: #0a2a43;
+            animation: zoomIn 0.28s ease-out;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+        }   
+
+        .popup-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 14px;
+            background: #fffcd6;
+            margin-bottom: 15px;
+            object-fit: cover;
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.15);
+        }
+
+        .close-btn {
+            margin-top: 12px;
+            background: #fff;
+            padding: 8px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .close-btn:hover {
+            background: #e8e8e8;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-8px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.75); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+
+        /* footer */
+        footer {
+            margin-top: 60px;
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            background: rgba(251, 251, 251, 0.297);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .footer-icons img {
+            width: 28px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-title">
+        <img src="../readme images/logo.png" />
+            <div>
+                <div style="font-size: 26px; font-weight: 800;">Pillars of Excellence</div>
+                <div>Teachers of Pisay</div>
+            </div>
+        </div>
+
+        <div class="menu" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!-- menu -->
+    <div id="menuDropdown" class="nav-menu">
+        <a href="../main_page.html">Home Page</a>
+        <a href="../public/teachers.html">Teachers' Page</a>
+        <a href="../public/voting.html">Vote for Teacher</a>
+        <a href="../public/leaderboard.html">Leaderboard</a>
+    </div>
+
+    <div class="container">
+        <div class="subject-box">
+                <h2>Social Science</h2>
+            <ul>
+                <li><strong>Favorite Tambayan in Pisay:</strong> TBD</li>
+                <li><strong>Favorite Batch to Teach:</strong> TBD</li>
+                <li><strong>Favorite Canteen Food:</strong> TBD</li>
+                <li><strong>Best Pisay Event:</strong> TBD</li>
+                <li><strong>Most Interesting Thing you've Seen from a Student:</strong> TBD</li>
+                <li><strong>Best Subject Unit in Pisay (aside from your own):</strong> TBD</li>
+                <li><strong>Motto in Life:</strong> TBD</li>
+                <li><strong>Message to Future Batches:</strong> TBD</li>
+            </ul>
+        </div>
+
+        <div class="buttons-grid">
+
+            <!-- just copy paste the thing for more/less -->
+            <div class="teacher-btn"
+                data-name="Ma'am Bartolay"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 7 & 12">
+                Maria Cecilia Bartolay
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Sir Charles"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 10">
+                Charles Joseph De Guzman
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Sir Erin"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 8">
+                Erin Jude Dela Cruz 
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Ma'am Eisma"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 12">
+                Sarah Eisma
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Sir Glenn"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 7 & 9">
+                Jhon Glenn Espino
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Ma'am Kim"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 8 & 9">
+                Kimberly Favor
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Sir Lapuz"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 7 / Unit Head">
+                Arnold Lapuz
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Sir Vlad"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 11">
+                Vladimir Lopez
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Ma'am Sarenas"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 11">
+                Diana Lyn Sarenas
+            </div>
+
+            <div class="teacher-btn"
+                data-name="Ma'am Bambie"
+                data-img="../teacher_images/No Photo.jpg"
+                data-details="Grade 11">
+                Maria Bambie Untalan-Mina 
+            </div>
+        </div>
+    </div>
+
+    <!-- popup -->
+    <div class="popup-bg" id="popupBg">
+        <div class="popup-box">
+            <img id="popupImg" class="popup-img" src="">
+            <h3 id="popupName"></h3>
+            <p id="popupDetails"></p>
+            <div class="close-btn" onclick="closePopup()">Close</div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            Pillars of Excellence<br>© SCA CRUZ & CJA DIFUNTORUM
+        </div>
+
+        <div class="footer-icons">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
+        </div>
+
+        <div>
+            Contact: 01234567890<br>
+            Emails: b2029scacruz@pshs.edu.ph | b2029cjadifuntorum@pshs.edu.ph
+        </div>
+    </footer>
+
+    <script>
+        /* menu funcitons */
+        function toggleMenu() {
+            const menu = document.getElementById("menuDropdown");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+
+        /* popup function */
+        document.querySelectorAll(".teacher-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                document.getElementById("popupName").innerText = btn.dataset.name;
+                document.getElementById("popupDetails").innerText = btn.dataset.details;
+                document.getElementById("popupImg").src = btn.dataset.img;
+                document.getElementById("popupBg").style.display = "flex";
+            });
+        });
+
+        function closePopup() {
+            document.getElementById("popupBg").style.display = "none";
+        }
+    </script>
+</body>
+</html>
