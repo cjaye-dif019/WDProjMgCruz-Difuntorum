@@ -18,13 +18,13 @@ h1, h2, h3 {
   letter-spacing: 0.3px;
 }
 
-/* ===== BODY ===== */
+/* body */
 body {
   background: linear-gradient(#72a4ee, #3757c0);
   color: #0d1b2a;
 }
 
-/* ===== HEADER (UNIFIED) ===== */
+/* header*/
 header {
   display: flex;
   justify-content: space-between;
@@ -55,7 +55,7 @@ header {
   user-select: none;
 }
 
-/* ===== FOOTER (MATCHES HEADER STYLE) =====*/
+/*footer*/
 footer {
   margin-top: 60px;
   padding: 30px 50px;
@@ -113,7 +113,6 @@ footer {
   transform: scale(1.1);
 }
 
-/* ===== MOBILE FOOTER FIX ===== */
 @media (max-width: 768px) {
   footer {
     flex-direction: column;
