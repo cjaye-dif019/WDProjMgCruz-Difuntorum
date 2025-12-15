@@ -4,30 +4,38 @@ const menu = document.getElementById("menuDropdown");
 menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
 
-let selectedSubject=null;
+
+let selectedTeacher = null;
 
 function openVote(subject){
-  selectedSubject=subject;
-  selectedTeacher=null;
+  selectedSubject = subject;
+  selectedTeacher = null;
 
-  document.getElementById("overlay").style.display="flex";
-  document.getElementById("subjectTitle").innerText=subject;
+  document.getElementById("overlay").style.display = "flex";
+  document.getElementById("subjectTitle").innerText = subject;
 
-  const list=document.getElementById("teacherList");
-  list.innerHTML="";
+  const list = document.getElementById("teacherList");
+  list.innerHTML = "";
 
-  (teachers[subject]||[]).forEach(name=>{
-    const div=document.createElement("div");
-    div.className="teacher";
-    div.innerText=name;
-    div.onclick=()=>{
-      document.querySelectorAll(".teacher").forEach(t=>t.classList.remove("selected"));
+  (teachers[subject] || []).forEach(name => {
+    const div = document.createElement("div");
+
+    div.className = "teacher-btn";
+    div.innerText = name;
+
+    div.onclick = () => {
+      document
+        .querySelectorAll(".teacher-btn")
+        .forEach(t => t.classList.remove("selected"));
+
       div.classList.add("selected");
-      selectedTeacher=name;
+      selectedTeacher = name;
     };
+
     list.appendChild(div);
   });
 }
+
 
 function closeModal(){
   document.getElementById("overlay").style.display="none";
