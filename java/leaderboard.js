@@ -19,8 +19,8 @@ function getOverallWinners(limit = 5){
   });
 
   return Object.entries(totals)
-    .sort((a,b)=>b[1]-a[1])
-    .slice(0,limit);
+  .sort((a,b)=>b[1]-a[1])
+  .slice(0,limit);
 }
 
 const overallDiv = document.getElementById("bestOverall");
