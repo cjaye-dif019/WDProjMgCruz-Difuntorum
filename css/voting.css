@@ -19,7 +19,7 @@ body {
   min-height: 100vh;
 }
 
-/* ===== HEADER ===== */
+/* header */
 header {
   font-family: "Aileron";
   display: flex;
@@ -50,7 +50,7 @@ header {
   cursor: pointer;
 }
 
-/* ===== MENU ===== */
+/* menu */
 .nav-menu {
   position: absolute;
   top: 85px;
@@ -76,7 +76,7 @@ header {
   background: rgba(255,255,255,0.45);
 }
 
-/* ===== MAIN ===== */
+/* main */
 main {
   flex: 1;
   padding: 8vh 1.5rem 3vh;
@@ -94,17 +94,17 @@ p {
   margin-bottom: 30px;
 }
 
-/* ===== SUBJECT BUTTONS (FIXED) ===== */
+/* per subject */
 .subjects {
   display: grid;
-  grid-template-columns: repeat(3, 300px); /* equal width */
+  grid-template-columns: repeat(3, 300px); 
   gap: 18px;
-  justify-content: center; /* center grid */
+  justify-content: center; 
 }
 
 .subject {
   background: #f3e6c8;
-  height: 64px;                 /* equal height */
+  height: 64px;               
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,7 +123,7 @@ p {
   grid-column: span 3;
 }
 
-/* ===== MODAL ===== */
+/* modals */
 .overlay {
   position: fixed;
   inset: 0;
@@ -144,7 +144,7 @@ p {
   text-align: center;
 }
 
-/* ===== FOOTER ===== */
+/* footer */
 footer {
   margin-top: auto;
   padding: 30px 50px;
