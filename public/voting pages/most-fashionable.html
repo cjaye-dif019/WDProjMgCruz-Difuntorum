@@ -1,97 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name = "description" content="Pillars of Excellence; a website dedicated to the teachers of PSHS-MC.">
-    <meta name="keywords" content="Pillars of Excellence">
-    <meta name="author" content="SCA Cruz & CJA Difuntorum">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name = "description" content="Pillars of Excellence; a website dedicated to the teachers of PSHS-MC.">
+  <meta name="keywords" content="Pillars of Excellence">
+  <meta name="author" content="SCA Cruz & CJA Difuntorum">
 
-    <title>Voting Page - Most Fashionable</title>
-    <script src = "../../java/unit.js" defer></script>
-    <script src="../../java/teacher_name.js"></script>
-    <script src="../../java/voting_year.js"></script>
-    <script src="../../java/votecollection.js"></script>
-    <link rel="stylesheet" href="../../css/voting.css">
-        <link rel="stylesheet" href="../../css/headerfooter.css">
-    <link rel="icon" href = "../../readme images/logo.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
+  <title>Voting Page - Best Energy in Class</title>
+  <script src = "../../java/unit.js" defer></script>
+  <script src="../../java/teacher_name.js"></script>
+  <script src="../../java/voting_year.js"></script>
+  <script src="../../java/votecollection.js"></script>
+  <link rel="stylesheet" href="../../css/voting.css">
+  <link rel="stylesheet" href="../../css/headerfooter.css">
+  <link rel="icon" href = "../../readme images/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<header>
-  <div class="logo-title">
-    <img src="../../readme images/logo.png" />
-    <div>
-      <div style="font-size: 26px; font-weight: bold;">Pillars of Excellence</div>
-      <div style="font-family: 'Montserrat';">Teachers of Pisay</div>
+  <header>
+    <div class="logo-title">
+      <img src="../../readme images/logo.png" />
+      <div>
+        <div style="font-size: 26px; font-weight: bold;">Pillars of Excellence</div>
+        <div style="font-family: 'Montserrat';">Teachers of Pisay</div>
+      </div>
     </div>
-  </div>
 
-  <div class="menu" onclick="toggleMenu()">☰</div>
-</header>
+    <div class="menu" onclick="toggleMenu()">☰</div>
+  </header>
 
-<!-- menu -->
-<div id="menuDropdown" class="nav-menu">
+  <!-- menu -->
+  <div id="menuDropdown" class="nav-menu">
     <a href="../../main_page.html">Home Page</a>
     <a href="../teachers_main.html">Teachers' Page</a>
     <a href="../voting_main.html">Vote for Teacher</a>
     <a href="leaderboard.html">Leaderboard</a>
-</div>
-<main>
-  <h1>Most Fashionable</h1>
-  <p>explain this part</p>
-
-  <div class="subjects">
-    <div class="subject" onclick="openVote('Biology')">Biology</div>
-    <div class="subject" onclick="openVote('Chemistry')">Chemistry</div>
-    <div class="subject" onclick="openVote('Computer_Science')">Computer Science</div>
-    <div class="subject" onclick="openVote('English')">English</div>
-    <div class="subject" onclick="openVote('Filipino')">Filipino</div>
-    <div class="subject" onclick="openVote('Integrated_Science')">Integrated Science</div>
-    <div class="subject" onclick="openVote('Mathematics')">Mathematics</div>
-    <div class="subject" onclick="openVote('Physics')">Physics</div>
-    <div class="subject" onclick="openVote('Research')">Research</div>
-    <div class="subject" onclick="openVote('Social_Science')">Social Science</div>
-    <div class="subject" onclick="openVote('Technology')">Technology</div>
-    <div class="subject" onclick="openVote('PEHM')">PEHM</div>
-    <div class="subject wide" onclick="openVote('Values_Education')">Values Education</div>
   </div>
-</main>
 
-<!-- modal -->
-<div class="overlay" id="overlay">
-  <div class="modal">
-    <h2 id="subjectTitle"></h2>
-    <div id="teacherList"></div>
+  <main>
+    <h1>Best Energy in Class</h1>
+    <p>explain this part</p>
 
-    <div class="confirm" onclick="confirmVote()">CONFIRM VOTE</div>
-    <div class="close" onclick="closeModal()">Cancel</div>
+    <div class="subjects">
+      <div class="subject" onclick="openVote('Biology')">Biology</div>
+      <div class="subject" onclick="openVote('Chemistry')">Chemistry</div>
+      <div class="subject" onclick="openVote('Computer_Science')">Computer Science</div>
+      <div class="subject" onclick="openVote('English')">English</div>
+      <div class="subject" onclick="openVote('Filipino')">Filipino</div>
+      <div class="subject" onclick="openVote('Integrated_Science')">Integrated Science</div>
+      <div class="subject" onclick="openVote('Mathematics')">Mathematics</div>
+      <div class="subject" onclick="openVote('Physics')">Physics</div>
+      <div class="subject" onclick="openVote('Research')">Research</div>
+      <div class="subject" onclick="openVote('Social_Science')">Social Science</div>
+      <div class="subject" onclick="openVote('Technology')">Technology</div>
+      <div class="subject" onclick="openVote('PEHM')">PEHM</div>
+      <div class="subject wide" onclick="openVote('Values_Education')">Values Education</div>
+    </div>
+  </main>
+
+  <!-- modal -->
+  <div class="overlay" id="overlay">
+      <div class="modal">
+      <h2 id="subjectTitle"></h2>
+      <div id="teacherList"></div>
+
+      <div class="confirm" onclick="confirmVote()">CONFIRM VOTE</div>
+      <div class="close" onclick="closeModal()">Cancel</div>
+    </div>
   </div>
-</div>
 
-<footer>
+  <footer>
     <div>
-        Pillars of Excellence<br>© SCA CRUZ & CJA DIFUNTORUM
+      Pillars of Excellence<br>© SCA CRUZ & CJA DIFUNTORUM
     </div>
 
     <div class="footer-icons">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
     </div>
 
     <div>
-        Contact: 01234567890<br>
-        Emails: b2029scacruz@pshs.edu.ph | b2029cjadifuntorum@pshs.edu.ph
+      Contact: 01234567890<br>
+      Emails: b2029scacruz@pshs.edu.ph | b2029cjadifuntorum@pshs.edu.ph
     </div>
-</footer>
+  </footer>
 
-<script>
-const CATEGORY ="BEST FASHIONABLE";
-</script>
+  <script>
+    const CATEGORY ="BEST FASHIONABLE";
+  </script>
 </body>
 </html>
