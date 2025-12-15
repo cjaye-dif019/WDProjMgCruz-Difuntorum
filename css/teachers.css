@@ -169,3 +169,110 @@ footer {
     background: rgba(255,255,255,0.45);
     padding-left: 28px;
 }
+
+
+/* tablet/small laptop */
+@media (max-width: 1024px) {
+
+    header {
+        padding: 16px 28px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    .grid-container {
+        gap: 20px;
+    }
+
+    .subject-btn {
+        font-size: 18px;
+        padding: 18px 10px;
+    }
+}
+
+
+/* phones */
+@media (max-width: 768px) {
+
+    header {
+        padding: 14px 22px;
+    }
+
+    .logo-title img {
+        width: 48px;
+    }
+
+    .menu {
+        font-size: 28px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 30px 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .description-box {
+        padding: 22px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+
+    .subject-btn {
+        font-size: 17px;
+        padding: 16px 0;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+    }
+
+    .footer-icons img {
+        margin-right: 6px;
+    }
+}
+
+
+/* small phones */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.45rem;
+    }
+
+    .subject-btn {
+        font-size: 16px;
+        border-radius: 16px;
+    }
+}

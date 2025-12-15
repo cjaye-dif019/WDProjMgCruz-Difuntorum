@@ -218,3 +218,106 @@ footer {
     margin-right: 10px;
     cursor: pointer;
 }
+
+
+/* tablet/small laptop */
+@media (max-width: 1024px) {
+
+    header {
+        padding: 16px 28px;
+    }
+
+    .container {
+        width: 92%;
+        padding-top: 40px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .buttons-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .teacher-btn {
+        padding: 16px 0;
+        border-radius: 28px;
+    }
+}
+
+
+/* phones */
+@media (max-width: 768px) {
+
+    header {
+        padding: 14px 22px;
+    }
+
+    .logo-title img {
+        width: 48px;
+    }
+
+    .menu {
+        font-size: 28px;
+    }
+
+    .container {
+        width: 95%;
+        padding-top: 30px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .subject-box {
+        padding: 20px;
+    }
+
+    .buttons-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-bottom: 60px;
+    }
+
+    .teacher-btn {
+        font-size: 16px;
+        padding: 14px 0;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+    }
+
+    .footer-icons img {
+        margin-right: 6px;
+    }
+}
+
+
+
+/* small phones */
+@media (max-width: 480px) {
+
+    h2 {
+        font-size: 1.45rem;
+    }
+
+    .popup-box {
+        width: 90%;
+        padding: 22px;
+    }
+
+    .popup-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .teacher-btn {
+        border-radius: 22px;
+    }
+}
