@@ -1,20 +1,22 @@
 
 const teacherYear = {
+  //FYP
+
+  // biology
   "Dawn Crisologo":"FYP","Carmina Dalida":"FYP","Jerrica Alzate-Gunda":"FYP",
+  // chemistry
   "Lovelyn Balbedina":"FYP", "Mara Esguerra":"FYP","Jayson Bingcang":"FYP",
-  "Maria Capundag":"FYP","Lodivina Pabello":"FYP",
-  "Jonathan Javier":"FYP","Recel Calaunan":"FYP","Edwin Del Rosario":"FYP","Sheila Fernandez":"FYP",
-  "Liz Saguico":"FYP",
-  "China De Vera":"FYP","Lerma Espina":"FYP","Mike Aloba":"FYP","Rey Nino Baguio":"FYP","Princess Casa":"FYP","Bernard Llaguno":"FYP",
-  "Yna Mongcal":"FYP","Deanne Zambrano":"FYP",  "Franel Infante": "FYP",
-  "Mardan Llanura": "FYP",
-  "Louvelle Parulan": "FYP",
-  "Pao Apolinario": "FYP & SYP",
-  "Melodee Pacio": "FYP",
-  "Karlo Kristobal": "FYP",
-   "Lieza Crisostomo": "FYP",
+  // computer science
+  "Maria Capundag":"FYP","Lodivina Pabello":"FYP","Jonathan Javier":"FYP",
+  //english
+  "Recel Calaunan":"FYP","Edwin Del Rosario":"FYP","Sheila Fernandez":"FYP", "Liz Saguico":"FYP",
+  //filipino
+  "China De Vera":"FYP","Lerma Espina":"FYP",
+  //integrated science/earth science
+  "Mike Aloba":"FYP","Rey Nino Baguio":"FYP","Princess Casa":"FYP","Bernard Llaguno":"FYP", "Yna Mongcal":"FYP","Deanne Zambrano":"FYP", 
+  //math
+  "Franel Infante": "FYP","Mardan Llanura": "FYP","Louvelle Parulan": "FYP", "Melodee Pacio": "FYP", "Karlo Kristobal": "FYP", "Lieza Crisostomo": "FYP",
   "Maria Torralba": "FYP",
-    "Maria Bartolay": "FYP & SYP",   
   "Glenn Espino": "FYP & AYP",     
   "Arnold Lapuz": "FYP",           
   "Erin Dela Cruz": "FYP",         
@@ -101,7 +103,8 @@ const teacherYear = {
   "Jejomar Bongat": "SYP",
   "Ana Carvajal": "SYP",
 
-  "Efren Paz": "FYP & SYP","John Wyson":"FYP & SYP", "Mary Dino":"FYP & SYP", "Flordeliza Fermin":"FYP & SYP",
+  "Efren Paz": "FYP & SYP","John Wyson":"FYP & SYP", "Mary Dino":"FYP & SYP", "Flordeliza Fermin":"FYP & SYP",   "Pao Apolinario": "FYP & SYP", 
+
   "Mark Tarcelo": "FYP & AYP", "Nico Orduna": "FYP & AYP", 
   "Edwin De Ocampo ": "AYP & SYP", "Joseph Estrella": "AYP & SYP", "Sarah Napoles": "AYP & SYP",  "Kim Gargar": "AYP & SYP"
 
