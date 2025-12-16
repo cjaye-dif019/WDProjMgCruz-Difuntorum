@@ -75,6 +75,8 @@ p {
     white-space: normal;       
     word-break: break-word;    
 
+}
+
 .subject:hover {
     background: #ffe29f;
     transform: translateY(-3px);
@@ -195,5 +197,4 @@ p {
     .subject.wide {
         grid-column: span 2;
     }
-}
 }
