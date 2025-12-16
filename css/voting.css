@@ -54,7 +54,7 @@ p {
 /* per subject */
 .subjects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns, equal width */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 18px;
     justify-content: center; 
 }
