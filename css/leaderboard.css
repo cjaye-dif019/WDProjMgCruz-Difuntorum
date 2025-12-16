@@ -22,16 +22,14 @@ body{
   gap:40px;
 }
 
-.section_special 
-{
-  margin:auto;
-  padding:40px 30px 80px;
-
-  background:#3e63d9;
-  border-radius:28px;
-  padding:30px;
-  margin-bottom:40px;
+.section_special {
+  max-width: 1200px;  
+  margin: 0 auto 40px; 
+  padding: 30px;
+  background: #3e63d9;
+  border-radius: 28px;
 }
+
 
 .section{
   background:#3e63d9;
@@ -65,4 +63,64 @@ body{
   font-weight:800;
   text-transform:uppercase;
 }
+
+/* tablets & small laptops */
+@media (max-width: 1024px) {
+
+  .container {
+    max-width: 100%;
+    padding: 30px 24px 60px;
+    gap: 30px;
+  }
+
+  .section,
+  .section_special {
+    padding: 26px;
+  }
+
+  .section-title {
+    font-size: 0.95rem;
+  }
+
+  .rank {
+    font-size: 0.9rem;
+  }
+}
+
+/* phones */
+@media (max-width: 768px) {
+
+  .container {
+    grid-template-columns: 1fr;  
+    padding: 24px 18px 50px;    
+    gap: 24px;
+  }
+
+  .section,
+  .section_special {
+    border-radius: 22px;
+    padding: 22px;
+    max-width: 90%;               
+    margin: 0 auto 24px;        
+  }
+
+  .section-title {
+    padding: 12px 18px;
+    border-radius: 16px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .rank {
+    padding: 12px 16px;
+    border-radius: 14px;
+    font-size: 0.88rem;
+  }
+
+  .subject-title {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+}
+
 

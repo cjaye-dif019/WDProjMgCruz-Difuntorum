@@ -61,7 +61,7 @@ body {
 }
 
 .subject-btn {
-    font-size: 3rem;
+    font-size: 5rem;
     background: rgb(132, 184, 240);
     border-radius: 35px;
     box-shadow: 0 12px 25px rgba(0,0,0,0.25);
@@ -81,7 +81,7 @@ body {
     width: 100%;
 
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 1px;
 
@@ -146,23 +146,11 @@ body {
         font-size: 18px;
         padding: 18px 10px;
     }
+    
+    
 }
 
-
-/* phones */
 @media (max-width: 768px) {
-
-    header {
-        padding: 14px 22px;
-    }
-
-    .logo-title img {
-        width: 48px;
-    }
-
-    .menu {
-        font-size: 28px;
-    }
 
     .container {
         width: 95%;
@@ -183,29 +171,39 @@ body {
     }
 
     .grid-container {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .full-width {
-        grid-column: span 1;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        align-items: stretch;
     }
 
     .subject-btn {
-        font-size: 17px;
-        padding: 16px 0;
+        height: 90px;
+        display: flex;
+        align-items: stretch;
     }
 
-    footer {
-        flex-direction: column;
-        gap: 18px;
+    .subject-btn a {
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         text-align: center;
+        padding: 0 10px;
+        line-height: 1.2;
+        word-break: break-word;
+        white-space: normal;
+
+        font-size: 15px;
     }
 
-    .footer-icons img {
-        margin-right: 6px;
+    .subject-btn.full-width {
+        grid-column: span 2;
     }
 }
+
 
 
 /* small phones */

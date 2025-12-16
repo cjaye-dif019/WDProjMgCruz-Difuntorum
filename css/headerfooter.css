@@ -37,6 +37,9 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+
+    position: sticky;
+  position: relative;
 }
 
 .logo-title {
@@ -101,6 +104,10 @@ footer {
   padding-left: 28px;
 }
 
+.nav-menu.active {
+  display: flex;
+}
+
 
 .footer-icons img {
   width: 30px;
@@ -114,9 +121,24 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    padding: 14px 20px;
+  }
+
+  .logo-title img {
+    width: 46px;
+  }
+  /* FOOTER */
   footer {
     flex-direction: column;
     gap: 18px;
     text-align: center;
+    padding: 24px 20px;
+  }
+
+  .footer-icons img {
+    margin: 0 6px;
   }
 }

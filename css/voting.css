@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+  margin:0;
 }
 
 @font-face {
@@ -9,14 +10,28 @@ html, body {
 }
 
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(#72a4ee, #3757c0);
-  color: #0a2a43;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #72a4ee, #3757c0);
+    background-repeat: no-repeat;     
+    background-attachment: fixed;  
+    background-size: cover;           
+    color: #0a2a43;
 
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+body::before {
+    content: "";
+    position: fixed;      
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #72a4ee, #3757c0);
+    z-index: -1;           
 }
 
 /* main */
@@ -39,32 +54,37 @@ p {
 
 /* per subject */
 .subjects {
-  display: grid;
-  grid-template-columns: repeat(3, 300px); 
-  gap: 18px;
-  justify-content: center; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns, equal width */
+    gap: 18px;
+    justify-content: center; 
 }
 
 .subject {
-  background: #f3e6c8;
-  height: 64px;               
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 26px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: 0.25s;
-}
+    background: #f3e6c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;         
+    height: 64px;             
+    min-width: 100px;         
+    border-radius: 26px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.25s;
+    text-align: center;      
+    white-space: normal;       
+    word-break: break-word;    
 
 .subject:hover {
-  background: #ffe29f;
-  transform: translateY(-3px);
+    background: #ffe29f;
+    transform: translateY(-3px);
 }
 
 .subject.wide {
-  grid-column: span 3;
+    grid-column: span 3;
 }
+
 
 /* modals */
 .overlay {
@@ -87,7 +107,6 @@ p {
   text-align: center;
 }
 
-/* ===== TEACHER BUTTONS INSIDE MODAL ===== */
 #teacherList {
   display: flex;
   flex-direction: column;
@@ -113,7 +132,6 @@ p {
   transform: translateY(-2px);
 }
 
-/* selected state */
 .teacher-btn.selected {
   background: #ffcc4d;
   box-shadow: 0 6px 14px rgba(0,0,0,0.25);
@@ -151,52 +169,32 @@ p {
 
 /* tablet/small laptop */
 @media (max-width: 768px) {
-  header {
-    padding: 14px 22px;
-  }
+    .subjects {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
 
-  .logo-title img {
-    width: 48px;
-  }
-
-  .subjects {
-    grid-template-columns: repeat(2, 280px);
-    justify-content: center;
-  }
-
-  .subject.wide {
-    grid-column: span 2;
-  }
-
-  footer {
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
-  }
+    .subject.wide {
+        grid-column: span 2;
+    }
 }
 
 /* phones */
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.6rem;
-  }
+    .subjects {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 90%;
+        margin: auto;
+    }
 
-  p {
-    font-size: 0.9rem;
-  }
+    .subject {
+        height: 56px;
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
 
-  .subjects {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 90%;
-    margin: auto;
-  }
-
-  .subject {
-    height: 56px;
-    font-size: 0.9rem;
-  }
-
-  .subject.wide {
-    grid-column: span 2;
-  }
+    .subject.wide {
+        grid-column: span 2;
+    }
+}
 }

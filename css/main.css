@@ -201,39 +201,6 @@ p {
     to {opacity: 1}
 }
 
-.nav-menu {
-    position: absolute;
-    top: 85px;
-    right: 40px;
-    width: 230px;
-    background: #e4d2a8;
-    border-radius: 15px;
-    padding: 10px 0;
-    display: none;
-    flex-direction: column;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-    animation: fadeIn 0.25s ease-out;
-}
-
-.nav-menu a {
-    padding: 15px 22px;
-    text-decoration: none;
-    color: #000;
-    font-weight: 700;
-    border-bottom: 1px solid rgba(0,0,0,0.15);
-    transition: 0.2s;
-}
-
-.nav-menu a:last-child {
-    border-bottom: none;
-}
-
-.nav-menu a:hover {
-    background: rgba(255,255,255,0.45);
-    padding-left: 28px;
-}
-
-
 
 /* tablet/small laptop */
 @media (max-width: 1024px) {
