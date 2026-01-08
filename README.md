@@ -26,6 +26,8 @@ This webpage aims to provide a comprehensive overview of the subject units of te
 
 • __Leader Board Page__: This board will show the leading teachers in terms of votes based from the voting page. The top 3 best teachers (overall), based on the respones will be displayed with their names and photos. Upon scrolling down, the user will be able to see the top 3 teachers of each category of voting as well.
 
+• __Freedom Board Page__: On this page, users will be able to write messages of appreciation to the teacher they want to thank. These messages allow students to express their gratitude and acknowledge the teacher’s positive impact.
+
 #### Other Notes:
 * __Header__: Each subpage header has a dropdown menu at the side. Upon clicking it, options of each major subpage (Homepage, Voting Page, Teachers' Page, and Leaderboard) will appear. To the left as well is the logo and name of the website.
 * __Footer__: Footer contain the copyright for authors, contact information, and icons of social media icons, of which will redirect users to the corresponding PSHS Main Campus' social media page.
@@ -51,10 +53,12 @@ Javascript wil be used in order to maintain the voting and leadership board. JS 
 
 ### Unit Pages:
 <p align="center">
-<img src="readme images/Sample of each Subject.png" alt="Unit Pages" height="600">
-<img src="readme images/Click Teacher.png" alt="Unit Pages Expanded" height="600">
-</p>
 
+<img src="readme images/Sample of each Subject.png" alt="Unit Pages" height="600">
+
+<img src="readme images/Click Teacher.png" alt="Unit Pages Expanded" height="600">
+
+</p>
 
 ### Dropdown Menu (Expanded):
 <img src="readme images/Dropdown menu.png" alt="Dropdown Menu" height="600" align = "center" >
@@ -74,9 +78,21 @@ Javascript wil be used in order to maintain the voting and leadership board. JS 
 
 ### Leadership Board Page:
 <p align = "center">
+
 <img src="readme images/Leaderboard-First.png" alt="Leaderboard First" height="600">
 
 <img src="readme images/Leaderboard-Categories.png" alt="Leaderboard Categories" height="600">
+
+</p>
+
+### Freedom Board Page:
+<p align = "center">
+
+<img src="readme images/Freedom Board.png" alt="Freedom Board" height="600">
+
+<img src="readme images/Prior Notice to Posting.png" alt="Prior Notice to Posting" height="600">
+
+<img src="readme images/Message Posting Format.png" alt="Message Posting Format" height="600">
 
 </p>
 
