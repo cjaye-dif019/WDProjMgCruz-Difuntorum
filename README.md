@@ -28,6 +28,8 @@ This webpage aims to provide a comprehensive overview of the subject units of te
 
 • __Freedom Board Page__: On this page, users will be able to write messages of appreciation to the teacher they want to thank. These messages allow students to express their gratitude and acknowledge the teacher’s positive impact.
 
+* __Implementation__: When the user enters the webpage, they will see a button prompting them to write a message or post of appreciation to their teacher using an HTML form. The HTML form in this scenario is designed to collect information such as the content of the student's message and their option to remain anonymous. Once the post is submitted, this data will then be stored on a global server. All messages from students will then be displayed on the webpage (under the said button), allowing visitors of the website to scroll and to read messages shared by different students to their teachers.
+
 #### Other Notes:
 * __Header__: Each subpage header has a dropdown menu at the side. Upon clicking it, options of each major subpage (Homepage, Voting Page, Teachers' Page, and Leaderboard) will appear. To the left as well is the logo and name of the website.
 * __Footer__: Footer contain the copyright for authors, contact information, and icons of social media icons, of which will redirect users to the corresponding PSHS Main Campus' social media page.
