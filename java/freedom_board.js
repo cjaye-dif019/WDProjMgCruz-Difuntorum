@@ -32,6 +32,7 @@ anonCheck.onchange = () => {
     }
 };
 
+//button settings/post confirmation
 document.getElementById("submitPost").onclick = () => {
     const title = document.getElementById("postTitle").value.trim();
     const message = document.getElementById("postMessage").value.trim();

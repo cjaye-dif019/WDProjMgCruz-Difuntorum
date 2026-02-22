@@ -92,6 +92,7 @@ function renderCategory(categoryName, containerId){
   }
 }
 
+//per category render
 renderCategory("TITO OF PISAY", "tito");
 renderCategory("TITA OF PISAY", "tita");
 renderCategory("BEST ENERGY IN CLASS", "energyinclass");
