@@ -129,53 +129,48 @@ p {
     display: none;
 }
 
+.mySlides {
+    display: none;
+    width: 100%;
+}
+
 .mySlides img {
     width: 100%;
-    display: block;
+    height: 500px;
+    object-fit: cover;
 }
 
-/* next & back buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: #003d99;
-    font-weight: bold;
-    font-size: 28px;
-    user-select: none;
-    transition: 0.3s;
+/* slide animation */
+.slide-in {
+    animation: slideIn 0.6s ease-in-out;
 }
 
-.next {
-    right: 0;
-}
-
-.prev:hover, .next:hover {
-    color: #1a3caa;
-    transform: scale(1.2);
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
 }
 
 .text {
-    color: #003d99;
+    color: #007bff;
     font-size: 22px;
     font-weight: bold;
     position: absolute;
-    bottom: 18px;
-    left: 20px;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
 }
 
 .numbertext {
-    color: #003d99;
+    color: #007bff;
     font-size: 16px;
     position: absolute;
     top: 10px;
     left: 20px;
 }
 
-/* dos */
+/* dot */
 .dot {
     cursor: pointer;
     height: 12px;
