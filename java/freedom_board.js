@@ -1,3 +1,9 @@
+//menu settings
+function toggleMenu() {
+    const menu = document.getElementById("menuDropdown");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
 const noteModal = document.getElementById("noteModal");
 const postModal = document.getElementById("postModal");
 const postGrid = document.querySelector(".post-grid");
