@@ -24,56 +24,67 @@ document.querySelectorAll("[data-close]").forEach(btn => {
         postModal.style.display = "none";
     };
 });
-
-const anonCheck = document.getElementById("anonCheck");
-const fromInput = document.getElementById("postFrom");
-
-anonCheck.onchange = () => {
-    if (anonCheck.checked) {
-        fromInput.placeholder = "Anonymous (optional)";
-        fromInput.required = false;
+function toggleMenu() {
+    const menu = document.getElementById("menuDropdown");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
     } else {
-        fromInput.placeholder = "Your name";
-        fromInput.required = true;
+        menu.style.display = "flex";
     }
-};
+}
 
-//button settings/post confirmation
-document.getElementById("submitPost").onclick = () => {
-    const title = document.getElementById("postTitle").value.trim();
-    const message = document.getElementById("postMessage").value.trim();
-    let from = fromInput.value.trim();
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const noteModal = document.getElementById("noteModal");
+    const postModal = document.getElementById("postModal");
+    const postGrid = document.getElementById("postGrid");
+    const postForm = document.getElementById('freedomPostForm');
+    const openNoteBtn = document.getElementById("openNoteBtn");
+    const continueBtn = document.getElementById("continueBtn");
 
-    if (!title || !message) {
-        alert("Please fill in the title and message.");
-        return;
-    }
+//modal buttons
+    openNoteBtn.onclick = () => {
+        noteModal.style.display = "flex";
+    };
 
-    if (anonCheck.checked) {
-        from = from || "Anonymous";
-    } else {
-        if (!from) {
-            alert("Please enter your name or choose anonymous.");
-            return;
-        }
-    }
+    continueBtn.onclick = () => {
+        noteModal.style.display = "none";
+        postModal.style.display = "flex";
+    };
 
-    const postCard = document.createElement("div");
-    postCard.className = "post-card";
+    document.querySelectorAll("[data-close]").forEach(btn => {
+        btn.onclick = () => {
+            noteModal.style.display = "none";
+            postModal.style.display = "none";
+        };
+    });
 
-    postCard.innerHTML = `
-        <h3>${title}</h3>
-        <p>${message}</p>
-        <span class="from">— ${from}</span>
-    `;
+//form settings
+    postForm.addEventListener('submit', (e) => {
+        e.preventDefault(); 
+        // getting the values
+        const title = document.getElementById('postTitle').value;
+        const message = document.getElementById('postMessage').value;
+        const isAnon = document.getElementById('anonCheck').checked;
+        const nameInput = document.getElementById('postFrom').value;
+        
+        // author name
+        const author = isAnon ? "Anonymous" : (nameInput || "Anonymous");
 
-    postGrid.prepend(postCard);
+        // new post code
+        const newPost = document.createElement('div');
+        newPost.className = 'post-card';
+        newPost.innerHTML = `
+            <h3>${title}</h3>
+            <p>${message}</p>
+            <span class="from">— ${author}</span>
+        `;
 
-    document.getElementById("postTitle").value = "";
-    document.getElementById("postMessage").value = "";
-    fromInput.value = "";
-    anonCheck.checked = false;
-    anonCheck.onchange();
 
-    postModal.style.display = "none";
-};
+        postGrid.prepend(newPost);
+
+        //reset
+        postForm.reset();
+        postModal.style.display = "none"; 
+    });
+});
