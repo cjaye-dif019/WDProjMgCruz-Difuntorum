@@ -1,240 +1,302 @@
-html, body {
-     height: 100%;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@font-face {
-    font-family: "Aileron";
-    src: url(../teacher_images/aileron.heavy.otf); 
-    font-weight: 800;
+:root {
+    --gold-primary: #d4af37;
+    --gold-glow: rgba(212, 175, 55, 0.3);
+    --bg-dark: #08090d;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --text-muted: #a0a5b5;
+    --subject-accent: #d46a6a; 
+    --subject-accent-glow: rgba(212, 106, 106, 0.3);
+}
+
+html, body {
+    height: 100%;
 }
 
 body {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
+    background-color: var(--bg-dark) !important;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
 }
 
-/* main stuff */
+/* background */
+body::before {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    width: 60vw; 
+    height: 60vw;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+    top: -20%; 
+    left: -10%;
+    animation: floatOrb 20s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes floatOrb {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(10%, 5%) scale(1.1); }
+}
+
+/* main content - not subject specific*/
 .container {
     width: 85%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
-    flex: 1;     
-}
-
-ul {
-    text-align: left;
-    font-family: "Montserrat", sans-serif;
-}
-
-h2{
-    font-size: 2rem;
-    text-align: center;
-    font-family: "Aileron", sans-serif;
-}
-
-/*main stuff */
-.container {
-    width: 85%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
+    max-width: 1200px;
+    margin: 4rem auto;
+    flex: 1;
+    opacity: 0;
+    animation: cinematicReveal 1.2s ease-out forwards;
 }
 
 .subject-box {
-    background: rgba(255,255,255,0.4);
-    padding: 25px;
+    background: var(--card-bg);
+    padding: 3rem;
     border-radius: 20px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.18);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: left;
 }
 
+.subject-box h2 {
+    font-family: "Aileron", sans-serif;
+    font-size: 2.5rem;
+    color: var(--gold-primary);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.subject-box ul {
+    list-style: none;
+}
+
+.subject-box li {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    border-left: 2px solid var(--subject-accent);
+    padding-left: 15px;
+    line-height: 1.6;
+}
+
+.subject-box li strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+/* teacher buttons */
 .buttons-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    width: 100%;
+    gap: 20px;
     margin-bottom: 80px;
 }
 
 .teacher-btn {
-    background: #4db8ff;
-    padding: 18px 0;
-    border-radius: 35px;
-    font-weight: 700;
+    background: var(--subject-accent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    color: #08090d; 
+    
+    padding: 20px 10px;
+    border-radius: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
     cursor: pointer;
-    color: #0a2a43;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
-    transition: 0.25s;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .teacher-btn:hover {
-    background: #2fa0ff;
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px var(--subject-accent-glow);
+    
+    filter: brightness(1.1);
 }
 
-/* popup */
+.teacher-btn::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: 0.6s;
+}
+
+.teacher-btn:hover::after {
+    left: 100%;
+}
+
+/* teacher popup box */
 .popup-bg {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.45);
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
     display: none;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
     z-index: 9999;
 }
-
 .popup-box {
-    background: #4db8ff;
-    padding: 25px;
-    width: 310px;
-    border-radius: 22px;
+    background: #12141a;
+    border: 2px solid var(--subject-accent); 
+    padding: 40px;
+    width: 350px;
+    border-radius: 20px;
     text-align: center;
-    color: #0a2a43;
-    animation: zoomIn 0.28s ease-out;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
-}   
-
-.popup-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 14px;
-    background: #fffcd6;
-    margin-bottom: 15px;
-    object-fit: cover;
-    box-shadow: inset 0 0 8px rgba(0,0,0,0.15);
+    color: #ffffff;
+    box-shadow: 0 0 40px var(--subject-accent-glow);
+    animation: zoomIn 0.3s ease-out;
 }
 
+.popup-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    border: 2px solid var(--subject-accent);
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+
 .close-btn {
-    margin-top: 12px;
-    background: #fff;
-    padding: 8px 18px;
-    border-radius: 10px;
+    margin-top: 25px;
+    background: var(--subject-accent); 
+    color: #08090d; 
+    padding: 12px 30px;
+    border-radius: 8px;
     cursor: pointer;
-    font-weight: 700;
-    transition: 0.2s;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .close-btn:hover {
-    background: #e8e8e8;
+    background: #ffffff;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--subject-accent-glow);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-8px); }
-    to   { opacity: 1; transform: translateY(0); }
+/* intro of website page */
+.intro-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #08090d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: revealContent 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards 3.2s;
+}
+
+.typing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-title {
+    font-family: "Aileron", sans-serif;
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    position: relative;
+    animation: auraPulse 2s infinite alternate;
+}
+
+.intro-title span {
+    background: var(--subject-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid var(--subject-accent);
+    width: 0; 
+    
+    animation: 
+        typing 1.5s steps(15, end) forwards 0.5s,
+        blink 0.8s step-end infinite;
+}
+
+/* key frames */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--subject-accent); }
+}
+
+@keyframes auraPulse {
+    from { filter: drop-shadow(0 0 10px var(--subject-accent-glow)); }
+    to { filter: drop-shadow(0 0 25px var(--subject-accent)); }
+}
+
+@keyframes revealContent {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); visibility: hidden; }
+}
+body {
+    overflow: hidden;
+    animation: restoreScroll 0.1s forwards 3.8s;
+}
+
+@keyframes restoreScroll {
+    to { overflow-y: auto; }
+}
+
+@keyframes cinematicReveal {
+    0% { opacity: 0; transform: translateY(40px); filter: blur(10px); }
+    100% { opacity: 1; transform: translateY(0); filter: blur(0); }
 }
 
 @keyframes zoomIn {
-    from { opacity: 0; transform: scale(0.75); }
-    to   { opacity: 1; transform: scale(1); }
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
 }
 
-
-
-/* tablet/small laptop */
+/*responsiveness design*/
 @media (max-width: 1024px) {
-
-    header {
-        padding: 16px 28px;
-    }
-
-    .container {
-        width: 92%;
-        padding-top: 40px;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    .buttons-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 22px;
-    }
-
-    .teacher-btn {
-        padding: 16px 0;
-        border-radius: 28px;
-    }
+    .buttons-grid { grid-template-columns: repeat(3, 1fr); }
+    .container { width: 90%; }
 }
 
-
-/* phones */
 @media (max-width: 768px) {
-
-    header {
-        padding: 14px 22px;
-    }
-
-    .logo-title img {
-        width: 48px;
-    }
-
-    .menu {
-        font-size: 28px;
-    }
-
-    .container {
-        width: 95%;
-        padding-top: 30px;
-    }
-
-    h2 {
-        font-size: 1.6rem;
-    }
-
-    .subject-box {
-        padding: 20px;
-    }
-
-    .buttons-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
-        margin-bottom: 60px;
-    }
-
-    .teacher-btn {
-        font-size: 16px;
-        padding: 14px 0;
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 18px;
-        text-align: center;
-    }
-
-    .footer-icons img {
-        margin-right: 6px;
-    }
+    .buttons-grid { grid-template-columns: repeat(2, 1fr); }
+    .subject-box { padding: 2rem; }
+    .subject-box h2 { font-size: 2rem; }
 }
 
-
-
-/* small phones */
 @media (max-width: 480px) {
-
-    h2 {
-        font-size: 1.45rem;
-    }
-
-    .popup-box {
-        width: 90%;
-        padding: 22px;
-    }
-
-    .popup-img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .teacher-btn {
-        border-radius: 22px;
-    }
+    .buttons-grid { grid-template-columns: 1fr; }
+    .popup-box { width: 90%; }
 }

@@ -1,4 +1,3 @@
-
 //menu settings
 function toggleMenu() {
     const menu = document.getElementById("menuDropdown");

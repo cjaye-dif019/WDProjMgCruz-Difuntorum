@@ -1,72 +1,105 @@
-@font-face {
-    font-family: "Aileron";
-    src: url("../teacher_images/aileron.heavy.otf");
-    font-weight: 800;
-}
-
+/* =========================================
+   1. RESET & THEME FOUNDATION
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
 }
 
-.title-text,
-h1,
-h2,
-h3 {
-    font-family: "Aileron", sans-serif !important;
-    font-weight: 800;
-    letter-spacing: 0.3px;
+:root {
+    --gold-primary: #d4af37;
+    --gold-glow: rgba(212, 175, 55, 0.4);
+    --bg-dark: #08090d;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --text-muted: #a0a5b5;
+    --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* body */
 body {
-    background: linear-gradient(#72a4ee, #3757c0);
-    color: #0d1b2a;
+    background-color: var(--bg-dark) !important;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
-/* main thing */
+/* Background Animated Orbs */
+body::before, body::after {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+body::before {
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+    top: -20%; left: -10%;
+    animation: floatOrb 20s ease-in-out infinite alternate;
+}
+
+@keyframes floatOrb {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(10%, 5%) scale(1.1); }
+}
+
+/* =========================================
+   2. CONTAINER & INTRO
+   ========================================= */
 .container {
     width: 85%;
-    margin: auto;
-    padding: 40px 0;
+    max-width: 1100px;
+    margin: 4rem auto;
+    opacity: 0;
+    animation: cinematicReveal 1.2s ease-out forwards;
 }
 
 .description-box {
-    background: #c9f1ff;
-    padding: 28px;
-    border-radius: 18px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    margin-bottom: 40px;
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .description-box h2 {
-    margin-bottom: 10px;
-    color: #0a2a43;
+    font-family: "Aileron", sans-serif; /* Keeps your original heavy font */
+    font-size: 2.2rem;
+    color: var(--gold-primary);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
 }
 
 .description-box p {
-    color: #333;
-    line-height: 1.6;
-    font-size: 16px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
-/* per subject */
+/* =========================================
+   3. SUBJECT GRID & BUTTONS
+   ========================================= */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
-    margin-top: 30px;
+    gap: 25px;
+    opacity: 0;
+    animation: cinematicReveal 1.2s ease-out forwards 0.4s;
 }
 
 .subject-btn {
-    font-size: 5rem;
-    background: rgb(132, 184, 240);
-    border-radius: 35px;
-    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    position: relative;
+    background: transparent;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: var(--transition-smooth);
 }
 
 .subject-btn.full-width {
@@ -77,148 +110,79 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90px;
+    height: 100px;
     width: 100%;
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-
     text-decoration: none;
-    color: #ffffff;
-
-    transition: background 0.25s ease,
-                transform 0.15s ease,
-                letter-spacing 0.15s ease;
+    color: var(--gold-primary);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+    z-index: 2;
 }
 
+/* Hover Effects */
 .subject-btn:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 35px rgba(0,0,0,0.35);
+    border-color: var(--gold-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px var(--gold-glow);
+}
+
+.subject-btn::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transition: 0.5s;
+}
+
+.subject-btn:hover::after {
+    left: 100%;
 }
 
 .subject-btn:hover a {
-    background: rgba(184, 177, 177, 0.08);
-    letter-spacing: 2px;
+    background: var(--gold-primary);
+    color: #000;
+    letter-spacing: 4px;
 }
 
-.subject-btn:active {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+/* =========================================
+   4. CORE ANIMATIONS
+   ========================================= */
+@keyframes cinematicReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
 }
 
-.subject-btn:active a {
-    transform: scale(0.97);
-}
-
-
-
-.full-width {
-    grid-column: span 2;
-}
-
-
-/* tablet/small laptop */
-@media (max-width: 1024px) {
-
-    header {
-        padding: 16px 28px;
-    }
-
-    .container {
-        width: 92%;
-    }
-
-    h1 {
-        font-size: 2.4rem;
-    }
-
-    h2 {
-        font-size: 1.9rem;
-    }
-
-    .grid-container {
-        gap: 20px;
-    }
-
-    .subject-btn {
-        font-size: 18px;
-        padding: 18px 10px;
-    }
-    
-    
-}
-
+/* =========================================
+   5. RESPONSIVE
+   ========================================= */
 @media (max-width: 768px) {
-
-    .container {
-        width: 95%;
-        padding: 30px 0;
-    }
-
-    h1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    h2 {
-        font-size: 1.6rem;
-    }
-
-    .description-box {
-        padding: 22px;
-    }
-
+    .container { width: 92%; }
+    
     .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-        align-items: stretch;
-    }
-
-    .subject-btn {
-        height: 90px;
-        display: flex;
-        align-items: stretch;
-    }
-
-    .subject-btn a {
-        height: 100%;
-        width: 100%;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        text-align: center;
-        padding: 0 10px;
-        line-height: 1.2;
-        word-break: break-word;
-        white-space: normal;
-
-        font-size: 15px;
+        grid-template-columns: 1fr; /* Stack on mobile for more elegance */
     }
 
     .subject-btn.full-width {
-        grid-column: span 2;
-    }
-}
-
-
-
-/* small phones */
-@media (max-width: 480px) {
-
-    h1 {
-        font-size: 1.8rem;
+        grid-column: span 1;
     }
 
-    h2 {
-        font-size: 1.45rem;
-    }
-
-    .subject-btn {
-        font-size: 16px;
-        border-radius: 16px;
+    .description-box { padding: 2rem; }
+    
+    .subject-btn a {
+        font-size: 1.1rem;
+        height: 80px;
     }
 }

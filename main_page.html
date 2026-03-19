@@ -3,127 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name = "description" content="Pillars of Excellence; a website dedicated to the teachers of PSHS-MC.">
-  <meta name="keywords" content="Pillars of Excellence">
-  <meta name="author" content="SCA Cruz & CJA Difuntorum">
-
+  <meta name="description" content="Pillars of Excellence; a website dedicated to the teachers of PSHS-MC.">
   <title>The Pillars of Excellence</title>
-  <link rel="icon" href = "readme images/logo.png" type="image/png">
-  <script src = "./java/mainpage.js" defer></script>
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="icon" href="readme images/logo.png" type="image/png">
+  <script src="./java/mainpage.js" defer></script>
   <link rel="stylesheet" href="./css/headerfooter.css">
+  <link rel="stylesheet" href="./css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <div class="logo-title">
-        <img src="readme images/logo.png" />
-        <div>
-            <div class="title-text" style="font-size: 26px;">Pillars of Excellence</div>
-            <div>Teachers of Pisay</div>
+      <img src="readme images/logo.png" alt="Logo" />
+      <div>
+        <div class="title-text">Pillars of Excellence</div>
+        <div class="subtitle">Teachers of Pisay</div>
+      </div>
+    </div>
+
+        <div class="menu" onclick="toggleMenu()">☰</div>
+
+        <!-- menu -->
+        <div id="menuDropdown" class="nav-menu">
+        <a href="../main_page.html">Home Page</a>
+        <a href="../public/teachers_main.html">Teachers' Page</a>
+        <a href="../public/voting_main.html">Vote for Teacher</a>
+        <a href="../public/voting pages/leaderboard.html">Leaderboard</a>
+        <a href="../public/freedom_board.html">Freedom Board</a>
         </div>
-    </div>
-
-    <div class="menu" onclick="toggleMenu()">☰</div>
-
-    <!-- menu  -->
-    <div id="menuDropdown" class="nav-menu">
-      <a href="main_page.html">Home Page</a>
-      <a href="public/teachers_main.html">Teachers' Page</a>
-      <a href="public/voting_main.html">Vote for Teacher</a>
-      <a href="public/voting pages/leaderboard.html">Leaderboard</a>
-      <a href="public/freeboard.html">Freedom Board</a>
-    </div>
   </header>
 
-  <div class="container">
-    <div class="intro-box">
-        <h2>Introduction to Website</h2>
-        <br>
-        <p>
-          Welcome to the official platform honoring the exceptional teachers of the Philippine Science High School - Main Campus.
-          This site aims to provide an overview of different subject units and their backgrounds as well as notable facts. This site also
-          aims to give students minimal info about different subject teachers, giving them a deeper look into the people who guide and 
-          shape their academic journey. It also features an interactive voting system wherein the students can choose to participate in 
-          choosing their favorite teachers with a selected category within the community. 
-        </p>
-        <br>
-        <p>
-          Besides being an information hub, this site also serves as a platform of appreciation for the hard work and commitment of different
-          teachers through a freedom wall wherein students can give messages of appreciation. By highlighting this, the students will gain awareness,
-          respect, and gratitude for the educators who continue to inspire them until the end of their academic journey in PSHS-MC.
-        </p>
-    </div>
+  <main class="content-wrapper">
+    <section class="intro-box">
+      <h2>Introduction to Website</h2>
+      <p>
+Welcome to the official platform honoring the exceptional teachers of the Philippine Science High School - Main Campus. This site aims to provide an overview of different subject units and their backgrounds as well as notable facts. This site also aims to give students minimal info about different subject teachers, giving them a deeper look into the people who guide and shape their academic journey. It also features an interactive voting system wherein the students can choose to participate in choosing their favorite teachers with a selected category within the community.
 
-    <!-- Slideshow  -->
+
+      <p>Besides being an information hub, this site also serves as a platform of appreciation for the hard work and commitment of different teachers through a freedom wall wherein students can give messages of appreciation. By highlighting this, the students will gain awareness, respect, and gratitude for the educators who continue to inspire them until the end of their academic journey in PSHS-MC.</p>
+</p>
+    </section>
+
     <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="teacher_images/Pisay Building.jpg" style="width:100%">
+        <div class="text">PSHS-MC</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="teacher_images/ValEd_Unit/ValuesEducation_Group.jpg" style="width:100%">
+        <div class="text">Teachers of PSHS-MC</div>
+      </div>      
+      <div class="mySlides fade">
+        <img src="teacher_images/Fil_Unit/Filipino_Group.jpg" style="width:100%">
+        <div class="text">Teachers of PSHS-MC</div>
+      </div>      
+      <div class="mySlides fade">
+        <img src="teacher_images/I-ES_Unit/IES_Group.jpeg" style="width:100%">
+        <div class="text">Teachers of PSHS-MC</div>
+      </div>
+      </div>
 
-    <!-- group pics -->
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 4</div>
-      <img src="teacher_images/Pisay Building.jpg" style="width:100%">
-      <div class="text">PSHS-MC</div>
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
     </div>
 
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 4</div>
-      <img src="teacher_images/Fil_Unit/Filipino_Group.jpg" style="width:100%">
-      <div class="text">Filipino Unit</div>
+    <div class="card-container">
+      <a href="public/teachers_main.html" class="card">Teachers</a>
+      <a href="public/voting_main.html" class="card">Vote for Favorite</a>
+      <a href="public/freedom_board.html" class="card">Freedom Board</a>
+      <a href="public/voting pages/leaderboard.html" class="card">Leaderboard</a>
     </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 4</div>
-      <img src="teacher_images/I-ES_Unit/IES_Group.jpeg" style="width:100%">
-      <div class="text">Integrated/Earth Science Unit</div>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">4 / 4</div>
-      <img src="teacher_images/ValEd_Unit/ValuesEducation_Group.jpg" style="width:100%">
-      <div class="text">Values Education Unit</div>
-    </div>
-
-  </div>
-
-  <br>
-
-  <!-- dots -->
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-  </div>
-
-  <div class="button-row">
-    <div class="leaderboard-btn"><a href="public/teachers_main.html">Teachers</a></div>
-      <div class="leaderboard-btn"><a href="public/voting_main.html">Vote for your Favorite Teacher</a></div>
-        <div class="leaderboard-btn"><a href="public/freedom_board.html">Freedom Board</a></div>
-    <div class="leaderboard-btn"><a href="public/voting pages/leaderboard.html">Leaderboard</a></div>
-  </div>
+  </main>
 
   <footer>
-    <div class="footer-left">
-      Pillars of Excellence<br>© SCA CRUZ & CJA DIFUNTORUM
-    </div>
+    <div class="footer-top">
+      <div class="footer-left">
+        <span class="footer-brand">Pillars of Excellence</span><br>
+        © SCA CRUZ & CJA DIFUNTORUM
+      </div>
 
-    <div class="footer-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" />
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" />
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" />
-    </div>
+      <div class="footer-icons">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" />
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
+      </div>
 
-    <div class="footer-right">
-      Contact No: 01234567890
-      <br>
-      Email: b2029scacruz@pshs.edu.ph | b2029cjadifuntorum@pshs.edu.ph
+      <div class="footer-right">
+        Contact No: 01234567890<br>
+        Email: b2029scacruz@pshs.edu.ph | b2029cjadifuntorum@pshs.edu.ph
+      </div>
     </div>
 
     <div class="footer-bottom-text">
-      Thank you to all the teachers for their utmost guidance and contribution to ensuring the success of this project.
+      THANK YOU TO ALL THE TEACHERS FOR THEIR UTMOST GUIDANCE AND CONTRIBUTION TO ENSURING THE SUCCESS OF THIS PROJECT.
     </div>
   </footer>
 </body>

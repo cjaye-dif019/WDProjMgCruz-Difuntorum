@@ -3,159 +3,197 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-@font-face {
-  font-family: "Aileron";
-  src: url("../teacher_images/aileron.heavy.otf");
-  font-weight: 800;
+:root {
+  --gold-primary: #d4af37;    
+  --gold-glow: #f9e27d;       
+  --gold-faint: rgba(212, 175, 55, 0.1); 
+  --text-muted: #a0a0a0;
+  --bg-dark: #08090d;
 }
 
-.title-text,
-h1, h2, h3 {
-  font-family: "Aileron", sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.3px;
-}
-
-/* body */
-body {
-  background: linear-gradient(#72a4ee, #3757c0);
-  color: #0d1b2a;
-}
-
-/* header*/
+/*  header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(251, 251, 251, 0.666);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  padding: 18px 40px;
+  padding: 15px 60px;
+  background: rgba(8, 9, 13, 0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
   position: sticky;
   top: 0;
-  z-index: 1000;
-
-    position: sticky;
-  position: relative;
+  z-index: 2000;
 }
 
 .logo-title {
   display: flex;
   align-items: center;
-  gap: 14px;
-}
-
-.logo-title img {
-  width: 58px;
-}
-
-.menu {
-  font-size: 32px;
-  cursor: pointer;
-  user-select: none;
-}
-
-/*footer*/
-footer {
-  margin-top: 60px;
-  padding: 30px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(251, 251, 251, 0.297);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  flex-wrap: wrap;
-}
-
-/* Style for each footer section */
-.footer-left, .footer-icons, .footer-right {
-  display: flex;
-  justify-content: center;
   gap: 15px;
 }
 
-.footer-bottom-text {
-  width: 100%;
-  text-align: center;
-  font-size: 14px;     
-  color: #555;
-  font-style: italic;
-  margin-top: 20px;
-  padding-top: 10px; 
+.logo-title img {
+  width: 50px;
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.4));
 }
 
+.title-text {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--gold-primary);
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.8;
+  color: #fff;
+}
+
+/* menu button */
+.menu {
+  font-size: 28px;
+  color: var(--gold-primary);
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  user-select: none;
+  z-index: 2001;
+}
+
+.menu:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px var(--gold-glow);
+  transform: scale(1.1);
+}
+
+/*  dropdown menu */
 .nav-menu {
-  position: absolute;
-  top: 85px;
-  right: 40px;
-  width: 230px;
-  background: #e4d2a8;
-  border-radius: 15px;
-  padding: 10px 0;
-  display: none;
+  display: none; 
   flex-direction: column;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-  animation: fadeIn 0.25s ease-out;
+  position: fixed; 
+  top: 80px; 
+  right: 60px;
+  background: rgba(18, 15, 8, 0.98); 
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  min-width: 250px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 15px rgba(212, 175, 55, 0.2);
+  z-index: 3000;
+  animation: menuFadeIn 0.3s ease-out forwards;
 }
 
 .nav-menu a {
-  padding: 15px 22px;
+  color: var(--text-muted);
   text-decoration: none;
-  color: #000;
-  font-weight: 700;
-  border-bottom: 1px solid rgba(0,0,0,0.15);
-  transition: 0.2s;
+  padding: 18px 25px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.05);
+}
+
+.nav-menu a:hover {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--gold-primary);
+  padding-left: 35px; 
 }
 
 .nav-menu a:last-child {
   border-bottom: none;
 }
 
-.nav-menu a:hover {
-  background: rgba(255,255,255,0.45);
-  padding-left: 28px;
+/* footer */
+footer {
+  width: 100%;
+  background: rgba(5, 5, 5, 1);
+  padding: 60px 0 30px 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  margin-top: auto;
+  z-index: 10;
+  position: relative;
 }
 
-.nav-menu.active {
+.footer-top {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 40px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.footer-brand {
+  color: var(--gold-primary);
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.footer-left, .footer-right {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-right { text-align: right; }
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
 
 .footer-icons img {
-  width: 30px;
-  margin-right: 10px;
+  width: 24px;
+  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(10deg); 
+  transition: transform 0.3s, filter 0.3s;
   cursor: pointer;
-  transition: 0.2s;
 }
 
 .footer-icons img:hover {
-  transform: scale(1.1);
+  transform: translateY(-5px);
+  filter: none; 
 }
 
-@media (max-width: 768px) {
+.footer-bottom-text {
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  padding: 30px 20px 0 20px;
+  color: rgba(255, 255, 255, 0.3);
+  max-width: 800px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
 
-  /* HEADER */
-  header {
-    padding: 14px 20px;
-  }
+/* animations */
+@keyframes menuFadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  .logo-title img {
-    width: 46px;
+/* responsiveness */
+@media (max-width: 850px) {
+  header { padding: 15px 30px; }
+  .nav-menu {
+    right: 20px;
+    width: calc(100% - 40px);
   }
-  /* FOOTER */
-  footer {
+  .footer-top {
     flex-direction: column;
-    gap: 18px;
+    gap: 30px;
     text-align: center;
-    padding: 24px 20px;
   }
-
-  .footer-icons img {
-    margin: 0 6px;
-  }
+  .footer-right { text-align: center; }
 }
