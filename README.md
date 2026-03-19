@@ -6,14 +6,14 @@ The use of update and remove for localStorage will be used for both the leaderbo
 
 (1) Leaderboard for voting: Users will be allowed to delete their votes. With their votes being stored in localStorage, they will now be able to remove their votes as they wish. This will be able to do so with an "x button" followed by a confirmation message.
 <p>
- <img src="readme images/q4 update - leaderboard.png" alt = "q4 update - board height="600"sa>
+ <img src="readme images/q4 update - leaderboard.png" alt = "q4 update - board height="300"sa>
 </p> 
 
 (2) Freedom Board: As the main HTML form interface of the site, users will now be allowed to delete and edit their posts. The localStorage saves their responses (name, title of post, and post) and posts the respective data as notes on the site. After posting, there will be buttons on the note, an "x-button" to the upper right and an "Edit Note" button to the lower right. They do their respective functions, to delete the function and edit, followed by a confirmation message.
 
 <p>
- <img src="readme images/q4 update - freedom.png" alt = "q4 update - board height="600"sa>
-  <img src="readme images/q4 update - message update.png" alt = "q4 update - board height="600"sa>
+ <img src="readme images/q4 update - freedom.png" alt = "q4 update - board height="300"sa>
+  <img src="readme images/q4 update - message update.png" alt = "q4 update - board height="300"sa>
 
 </p> 
 
