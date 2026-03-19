@@ -8,17 +8,17 @@ function toggleMenu() {
 let slideIndex = 1;
 let slideTimer;
 
-// Initialize the slideshow
+// slideshow functions and stuff
 showSlides(slideIndex);
 autoSlides();
 
-// Next/previous controls (if you add arrows later)
+// next/previous
 function plusSlides(n) {
   showSlides(slideIndex += n);
   resetTimer();
 }
 
-// Thumbnail image controls (The dots)
+// dots
 function currentSlide(n) {
   showSlides(slideIndex = n);
   resetTimer();
@@ -32,32 +32,32 @@ function showSlides(n) {
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
   
-  // Hide all slides
+  // hide slides
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
   
-  // Remove "active" class from all dots
+  //remove active
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   
-  // Show the current slide and highlight the dot
+  //show current highlighted dot
   if (slides[slideIndex-1]) {
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
   }
 }
 
-// Automatic transition
+// automatic transition
 function autoSlides() {
   slideTimer = setInterval(() => {
     slideIndex++;
     showSlides(slideIndex);
-  }, 5000); // Changes image every 5 seconds
+  }, 5000); // every 5 second changing
 }
 
-// Resets timer when user manually clicks a dot
+// resets the timer when a dot is clicked
 function resetTimer() {
   clearInterval(slideTimer);
   autoSlides();

@@ -1,126 +1,192 @@
-body{
-  margin:0;
-  font-family:'Montserrat',sans-serif;
-  background:linear-gradient(#72a4ee, #3757c0);
-  color:#fff;
+/* RESET & CORE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Aileron";
-  src: url(../teacher_images/aileron.heavy.otf); 
-  font-weight: 800;
+:root {
+    --gold-primary: #d4af37;
+    --gold-glow: rgba(212, 175, 55, 0.4);
+    --bg-dark: #08090d;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --text-muted: #a0a5b5;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-dark);
+    color: #fff;
+    min-height: 100vh;
+}
 
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:40px 30px 80px;
+/* BACKGROUND ORBS */
+body::before, body::after {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    border-radius: 50%;
+    pointer-events: none;
+}
+body::before {
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.07) 0%, transparent 70%);
+    top: -20%; left: -10%;
+}
 
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap:40px;
+/* SHIMMERING BOLD H1 */
+h1.shimmer {
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 3.2rem;
+    margin-top: 50px;
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmerEffect 4s linear infinite;
+    filter: drop-shadow(0 2px 10px rgba(0,0,0,0.5));
+}
+
+.intro-text {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* SECTIONS */
+.section, .section_special {
+    background: var(--card-bg);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 30px;
+    transition: 0.4s ease;
+}
+
+.section:hover {
+    border-color: var(--gold-primary);
+    transform: translateY(-5px);
 }
 
 .section_special {
-  max-width: 1200px;  
-  margin: 0 auto 40px; 
-  padding: 30px;
-  background: #3e63d9;
-  border-radius: 28px;
+    max-width: 1140px;
+    margin: 0 auto 40px;
+    border: 1px solid var(--gold-primary);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
 }
 
-
-.section{
-  background:#3e63d9;
-  border-radius:28px;
-  padding:30px;
-  margin-bottom:40px;
-}
-
-
-.section-title{
-  background:#45c4ff;
-  padding:14px 22px;
-  border-radius:20px;
-  font-weight:800;
-  margin-bottom:25px;
-  color:#000;
-}
-
-.rank{
-  background:#fffcd6;
-  color:#000;
-  padding:14px 20px;
-  border-radius:18px;
-  margin-bottom:12px;
-  font-weight:700;
-}
-
-.subject-title{
-  margin-top:25px;
-  margin-bottom:10px;
-  font-weight:800;
-  text-transform:uppercase;
-}
-
-/* tablets & small laptops */
-@media (max-width: 1024px) {
-
-  .container {
-    max-width: 100%;
-    padding: 30px 24px 60px;
-    gap: 30px;
-  }
-
-  .section,
-  .section_special {
-    padding: 26px;
-  }
-
-  .section-title {
-    font-size: 0.95rem;
-  }
-
-  .rank {
-    font-size: 0.9rem;
-  }
-}
-
-/* phones */
-@media (max-width: 768px) {
-
-  .container {
-    grid-template-columns: 1fr;  
-    padding: 24px 18px 50px;    
-    gap: 24px;
-  }
-
-  .section,
-  .section_special {
-    border-radius: 22px;
-    padding: 22px;
-    max-width: 90%;               
-    margin: 0 auto 24px;        
-  }
-
-  .section-title {
-    padding: 12px 18px;
-    border-radius: 16px;
-    font-size: 0.9rem;
+/* CATEGORY TITLE */
+.section-title {
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728);
+    background-size: 200% auto;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #000;
+    text-transform: uppercase;
     text-align: center;
-  }
+    animation: shimmerEffect 4s linear infinite;
+}
 
-  .rank {
-    padding: 12px 16px;
-    border-radius: 14px;
-    font-size: 0.88rem;
-  }
+/* TEACHER RANK BOXES */
+.rank {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--gold-primary);
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
 
-  .subject-title {
-    font-size: 0.85rem;
-    text-align: center;
-  }
+.rank:hover {
+    background: var(--gold-primary);
+    color: #000;
+    transform: translateX(8px);
+}
+
+.delete-btn {
+    background: rgba(255, 77, 77, 0.15);
+    color: #ff4d4d;
+    border: 1px solid rgba(255, 77, 77, 0.3);
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn:hover {
+    background: #ff4d4d;
+    color: white;
+    transform: scale(1.1);
+}
+
+.rank-container {
+    transition: opacity 0.3s ease;
+}
+
+/* Position the actions (Edit/Delete) in the top right */
+.post-actions {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.edit-post, .delete-post {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: 0.2s;
+}
+
+.edit-post:hover {
+    color: #d4af37; /* Gold on hover */
+}
+
+.delete-post:hover {
+    color: #ff4d4d; /* Red on hover */
+}
+
+/* Ensure the card has space for the icons */
+.post-card {
+    padding-top: 40px; 
 }
 
 
+@keyframes shimmerEffect {
+    to { background-position: 200% center; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .container { grid-template-columns: 1fr; }
+    h1.shimmer { font-size: 2.2rem; }
+    .section_special { margin: 0 20px 30px; }
+}
