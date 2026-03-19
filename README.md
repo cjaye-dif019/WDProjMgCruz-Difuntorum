@@ -2,7 +2,7 @@
 ## The Pillars of Excellence
 
 ### (Q4)  FINAL MODIFICATION PROPOSAL
-The use of update and remove for localStorage will be used for both the leaderboard for voting and the freedom board. 
+The use of update and delete from CRUD for localStorage will be used for both the leaderboard for voting and the freedom board. 
 
 (1) Leaderboard for voting: Users will be allowed to delete their votes. With their votes being stored in localStorage, they will now be able to remove their votes as they wish. This will be able to do so with an "x button" followed by a confirmation message.
 <p>
