@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>${post.message}</p>
                 <div class="post-footer">
                     <span class="from">— ${post.author}</span>
-                    <button class="edit-post-btn" onclick="openEditModal(${index})">✎ edit note</button>
+                    <button class="edit-post-btn" onclick="openEditModal(${index})">✎ Edit Note </button>
                 </div>
             `;
             postGrid.appendChild(card);
